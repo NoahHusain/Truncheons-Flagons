@@ -1,7 +1,7 @@
 // TODO: import, invoke function TeamOptionList() with HTML string for option on line 27;
 // cut and paste 27 over to TeamOptionList() function
 
-import { getTeams } from "./dataAccess.js"
+import { getTeams } from "/root/workspace/truncheons/src/scripts/databaseAccess.js"
  
 // render function for new player form
 export const newPlayerForm = () => {
@@ -45,5 +45,5 @@ const teamOptionList = () => {
 }
 
 const teamListItem = (team) => {
-    return `<option class="teamSelectOption" value="${team.id}">${team.name}</option>
+    return `<option class="teamSelectOption" value="${team.id}">${team.name}</option>`
 }
