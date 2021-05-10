@@ -1,3 +1,5 @@
+import { getTeams } from "../databaseAccess.js"
+
 // render function for new team form
 export const newTeamForm = () => {
     let html = `
@@ -10,3 +12,28 @@ export const newTeamForm = () => {
     `
     return html
 }
+
+const mainContainer = document.querySelector("#container")
+
+mainContainer.addEventListener("click", clickEvent => {
+
+    if (clickEvent.target.id === "submitTeam") {
+
+        // grab user input
+        const inputTeamName = document.querySelector("input[name='teamName']").value
+        const creationDate = Date.now()
+
+        // generate new id
+        const teamsArray = getTeams()
+        const newTeamId = teamsArray.length + 1;
+    
+        const sendDataToAPI = {
+            dateCreated: creationDate,
+            name: inputTeamName,
+            id: newTeamId
+        }
+        // call Post API function on sendDataToAPI
+    }
+}
+
+)

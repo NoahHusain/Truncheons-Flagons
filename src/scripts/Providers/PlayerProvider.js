@@ -1,4 +1,4 @@
-import { getTeams } from "../databaseAccess.js"
+import { teamOptionList } from "../Lists/TeamList.js"
  
 // render function for new player form
 export const newPlayerForm = () => {
@@ -33,14 +33,3 @@ export const newPlayerForm = () => {
 }
 
 
-// function to create team list items for team dropdown menu
-const teamsArray = getTeams()
-const teamOptionList = () => {
-    return `
-        ${ teamsArray.map(teamListItem).join("\n") }
-    `
-}
-
-const teamListItem = (team) => {
-    return `<option class="teamSelectOption" value="${team.id}">${team.name}</option>`
-}
