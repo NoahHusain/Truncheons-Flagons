@@ -1,5 +1,5 @@
-import { newPlayerForm } from "./PlayerProvider.js";
-import { newTeamForm } from "./TeamProvider.js";
+import { newPlayerForm } from "./Providers./PlayerProvider.js";
+import { newTeamForm } from "./Providers./TeamProvider.js";
 // import {  } from "module";
 
 
@@ -17,6 +17,14 @@ export const TruncheonsFlagons = () => {
         <section class="new__team">
             <h2>New Team</h2>
             ${newTeamForm()}
+        </section>
+
+        <section class="new__leaderboard">
+            <h2>Leaderboard</h2>
+        </section>
+
+        <section class="start__game">
+        <button class="button" id="start__button">Start Game</button>
         </section>
     `
 }
