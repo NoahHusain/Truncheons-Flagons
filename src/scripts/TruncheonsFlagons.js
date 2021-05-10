@@ -22,5 +22,9 @@ export const TruncheonsFlagons = () => {
             <h2>Leaderboard</h2>
             ${Leaderboard()}
         </section>
+
+        <section class="start__game">
+        <button class="button" id="start__button">Start Game</button>
+        </section>
     `
 }
