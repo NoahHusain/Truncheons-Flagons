@@ -1,4 +1,4 @@
-import { getTeams } from "/root/workspace/truncheons/src/scripts/databaseAccess.js"
+import { getTeams } from "../databaseAccess.js"
  
 // render function for new player form
 export const newPlayerForm = () => {
