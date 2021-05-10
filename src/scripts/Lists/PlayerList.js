@@ -1,7 +1,7 @@
 // TODO: import, invoke function TeamOptionList() with HTML string for option on line 27;
 // cut and paste 27 over to TeamOptionList() function
 
-import { fetchTeams } from "./dataAccess.js"
+import { getTeams } from "./dataAccess.js"
  
 // render function for new player form
 export const newPlayerForm = () => {
@@ -37,7 +37,7 @@ export const newPlayerForm = () => {
 
 
 // function to create team list items for team dropdown menu
-const teamsArray = fetchTeams()
+const teamsArray = getTeams()
 const teamOptionList = () => {
     return `
         ${ teamsArray.map(teamListItem).join("\n") }
