@@ -1,5 +1,5 @@
-import { newPlayerForm } from "./Providers./PlayerProvider.js";
-import { newTeamForm } from "./Providers./TeamProvider.js";
+import { newPlayerForm } from "./Providers/PlayerProvider.js";
+import { newTeamForm } from "./Providers/TeamProvider.js";
 // import {  } from "module";
 
 
