@@ -1,7 +1,7 @@
 // TODO: import, invoke function TeamOptionList() with HTML string for option on line 27;
 // cut and paste 27 over to TeamOptionList() function
 
-import { } from "./dataAccess.js"
+import { fetchTeams } from "./dataAccess.js"
  
 // render function for new player form
 export const newPlayerForm = () => {
@@ -25,7 +25,7 @@ export const newPlayerForm = () => {
         <label class="label" for="teamSelection">Select a team:</label>
         <select name="teamSelection" class="dropdownList">
             <option class="teamSelectOption" value="">--choose one!--</option>
-            <option class="teamSelectOption" value="">This will be rendered in separate module</option>
+            ${teamOptionList()}
         </select>
     </div>
  
@@ -33,4 +33,17 @@ export const newPlayerForm = () => {
     <button class="button" id="submitPlayer">Draft to Team</button> 
     `
     return html
+}
+
+
+// function to create team list items for team dropdown menu
+const teamsArray = fetchTeams()
+const teamOptionList = () => {
+    return `
+        ${ teamsArray.map(teamListItem).join("\n") }
+    `
+}
+
+const teamListItem = (team) => {
+    return `<option class="teamSelectOption" value="${team.id}">${team.name}</option>
 }
