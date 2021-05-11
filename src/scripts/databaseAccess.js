@@ -44,3 +44,9 @@ export const getPlayers = () => {
 export const getScores = () => {
     return [...applicationState.scores]
 }
+
+export const setScores = (score1, score2, score3) => {
+    applicationState.scores = score1
+    applicationState.scores = score2
+    applicationState.scores = score3
+}
