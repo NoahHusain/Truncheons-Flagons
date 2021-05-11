@@ -1,5 +1,5 @@
 // get current list of teams from app state in database
-import { getTeams, setScores } from "../databaseAccess.js"
+import { getTeams, postScores, setScores } from "../databaseAccess.js"
 
 const teams = getTeams()
 const mainContainer = document.querySelector("#container")
@@ -23,6 +23,9 @@ export const scoreProvider = () => {
     </div>
  
     <button class="button" id="submitScores">Submit Score</button> 
+    <button class="button" id="submitScoresCloud">Submit Scores to Cloud</button> 
+
+    
     `
     return html
 }
@@ -77,3 +80,14 @@ mainContainer.addEventListener(
         }
     }
 )
+
+mainContainer.addEventListener(
+    "click",
+    (event) => {
+        if (event.target.id === 'submitScoresCloud'){
+            postScores(setScores(scores.team1Score, scores.team2Score, scores.team3Score))
+
+        }
+    }
+)
+

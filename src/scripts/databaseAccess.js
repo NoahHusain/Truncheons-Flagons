@@ -52,3 +52,19 @@ export const setScores = (score1, score2, score3) => {
     applicationState.currentScores.push(score2)
     applicationState.currentScores.push(score3)
 }
+
+export const postScores = (scoreObject) => {
+    const fetchScores = {
+        method: 'POST',
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(scoreObject)
+    }
+    return fetch("http://localhost:8088/scores", fetchScores)
+    .then(response => response.json())
+    .then(() => {
+        mainContainer.dispatchEvent(new CustomEvent("stateChanged"))
+    })
+}
+
