@@ -1,6 +1,6 @@
 import { newPlayerForm } from "./Providers/PlayerProvider.js";
 import { newTeamForm } from "./Providers/TeamProvider.js";
-import { TeamList } from "./Lists/TeamList.js";
+import { teamOptionList } from "./Lists/TeamList.js";
 // import {  } from "module";
 
 const mainContainer = document.querySelector("#container")
@@ -42,24 +42,26 @@ mainContainer.addEventListener("click",
 
             mainContainer.innerHTML = `
             <h1>Truncheons and Flagons</h1>
+    <div class="truncheons__container">
+    <article class="choices">
+        <section class="new__player">
+            <h2>New Player</h2>
+            ${newPlayerForm()}
+        </section>
+        <section class="new__team">
+            <h2>New Team</h2>
+            ${newTeamForm()}
+        </section>
+        </article>
         
-            <article class="choices">
-                <section class="new__player">
-                    <h2>New Player</h2>
-                    ${newPlayerForm()}
-                </section>
-                <section class="new__team">
-                    <h2>New Team</h2>
-                    ${newTeamForm()}
-                </section>
-        
-                <section class="new__leaderboard">
-                    <h2>Leaderboard</h2>
-                </section>
-        
-                <section class="game__play">
-                ${TeamList()}
-                </section>
+        <section class="game__play">
+        ${teamOptionList()}
+        </section>
+
+        <section class="new__leaderboard">
+            <h2>Leaderboard</h2>
+        </section>
+    </div>
             `
         }
     })
