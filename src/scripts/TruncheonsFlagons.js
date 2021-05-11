@@ -10,7 +10,7 @@ const mainContainer = document.querySelector("#container")
 export const TruncheonsFlagons = () => {
     return `
     <h1>Truncheons and Flagons</h1>
-
+    <div class="truncheons__container">
     <article class="choices">
         <section class="new__player">
             <h2>New Player</h2>
@@ -20,14 +20,16 @@ export const TruncheonsFlagons = () => {
             <h2>New Team</h2>
             ${newTeamForm()}
         </section>
+        </article>
+        
+        <section class="game__play">
+        <button class="button" id="start__button">Start Game</button>
+        </section>
 
         <section class="new__leaderboard">
             <h2>Leaderboard</h2>
         </section>
-
-        <section class="game__play">
-        <button class="button" id="start__button">Start Game</button>
-        </section>
+    </div>
     `
 }
 
