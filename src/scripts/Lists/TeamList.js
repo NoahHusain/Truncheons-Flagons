@@ -1,7 +1,7 @@
 
 export const TeamList = () => {
     return "Team List"
-
+}
 import { getTeams } from "../databaseAccess.js"
 
 // function to create team list items for team dropdown menu
