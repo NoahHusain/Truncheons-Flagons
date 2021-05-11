@@ -14,5 +14,5 @@ export const teamOptionList = () => {
 }
 
 const teamListItem = (team) => {
-    return `<option class="teamSelectOption" value="${team.id}">${team.name}</option>`
+    return `<option class="input" name="teamSelectOption" value="${team.id}">${team.name}</option>`
 }
