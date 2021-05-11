@@ -14,5 +14,12 @@ const renderHTML = () => {
     )
 }
 
+mainContainer.addEventListener(
+    "stateChanged",
+    CustomEvent => {
+        renderHTML()
+    }
+)
+
 // Invoke render function
 renderHTML()

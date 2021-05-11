@@ -1,3 +1,24 @@
-body {
-  background-color: grey;
+h1, h2 {
+    text-align: center;
+}
+
+.truncheons__container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.choices {
+    flex: 1;
+}
+
+.new__leaderboard {
+    flex: 1;
+}
+
+.game__play {
+    flex: 2;
+}
+
+.button {
+    display: block;
 }
