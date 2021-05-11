@@ -21,7 +21,6 @@ export const newPlayerForm = () => {
     <div class="field">
         <label class="label" for="teamSelection">Select a team:</label>
         <select name="teamSelection" class="dropdownList">
-            <option class="input">--choose one!--</option>
             ${teamOptionList()}
         </select>
     </div>
@@ -43,19 +42,12 @@ mainContainer.addEventListener("click", clickEvent => {
         const inputLastName = document.querySelector("input[name='lastName']").value
         const inputCountry = document.querySelector("input[name='countryOfOrigin']").value
         
-        // event listener for dropdown menu change event--still not working, argh
-        const teamId = ""
-        mainContainer.addEventListener(
-            "change",
-            (event) => {
-                if (event.target.id === "teamSelectOption") {
-                    teamId = event.target.value
-                }
-            }
-        )
+        // function to access id of option element below
+        // Do I need an event listener here?
+
+        const inputTeamId = document.querySelector("#teamDropdown").selectedIndex
         
         
-        const inputTeamId = teamId
         
         const DataForAPI = {
             firstName: inputFirstName,

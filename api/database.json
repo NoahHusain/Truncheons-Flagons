@@ -14,6 +14,11 @@
       "id": 3,
       "name": "Helgen",
       "dateCreated": "01/05/2021"
+    },
+    {
+      "dateCreated": "5/11/2021, 6:15:28 PM",
+      "name": "The Lotus Eaters",
+      "id": 4
     }
   ],
   "players": [
@@ -128,6 +133,100 @@
       "country": "United States",
       "teamId": "",
       "id": 16
+    },
+    {
+      "firstName": "Alexander",
+      "lastName": "Lambrow",
+      "country": "United States",
+      "teamId": "1",
+      "id": 17
+    },
+    {
+      "firstName": "Alexander",
+      "lastName": "Lambrow",
+      "country": "United States",
+      "teamId": "1",
+      "id": 18
+    },
+    {
+      "firstName": "Alexander",
+      "lastName": "Lambrow",
+      "country": "United States",
+      "teamId": "1",
+      "id": 19
+    },
+    {
+      "firstName": "Alexander",
+      "lastName": "Lambrow",
+      "country": "United States",
+      "teamId": "1",
+      "id": 20
+    },
+    {
+      "firstName": "Alexander",
+      "lastName": "Lambrow",
+      "country": "United States",
+      "teamId": "1",
+      "id": 21
+    },
+    {
+      "firstName": "Alexander",
+      "lastName": "Lambrow",
+      "country": "United States",
+      "teamId": "1",
+      "id": 22
+    },
+    {
+      "firstName": "Alexander",
+      "lastName": "Lambrow",
+      "country": "United States",
+      "id": 23
+    },
+    {
+      "firstName": "Alexander",
+      "lastName": "Lambrow",
+      "country": null,
+      "id": 24
+    },
+    {
+      "firstName": "Alexander",
+      "lastName": "Lambrow",
+      "country": null,
+      "id": 25
+    },
+    {
+      "firstName": "Alexander",
+      "lastName": "Lambrow",
+      "country": null,
+      "id": 26
+    },
+    {
+      "firstName": "Alexander",
+      "lastName": "Lambrow",
+      "country": "United States",
+      "teamId": "1",
+      "id": 27
+    },
+    {
+      "firstName": "Alexander",
+      "lastName": "Lambrow",
+      "country": "United States",
+      "teamId": "1",
+      "id": 28
+    },
+    {
+      "firstName": "Alexander",
+      "lastName": "Lambrow",
+      "country": "United States",
+      "teamId": "--choose one!--",
+      "id": 29
+    },
+    {
+      "firstName": "Alexander",
+      "lastName": "Lambrow",
+      "country": "United States",
+      "teamId": "--choose one!--",
+      "id": 30
     }
   ],
   "scores": [
