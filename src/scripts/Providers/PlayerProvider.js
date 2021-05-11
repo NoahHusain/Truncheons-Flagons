@@ -21,7 +21,7 @@ export const newPlayerForm = () => {
     <div class="field">
         <label class="label" for="teamSelection">Select a team:</label>
         <select name="teamSelection" class="dropdownList">
-            <option class="input" name="teamSelectOption">--choose one!--</option>
+            <option class="input">--choose one!--</option>
             ${teamOptionList()}
         </select>
     </div>
@@ -42,13 +42,26 @@ mainContainer.addEventListener("click", clickEvent => {
         const inputFirstName = document.querySelector("input[name='firstName']").value
         const inputLastName = document.querySelector("input[name='lastName']").value
         const inputCountry = document.querySelector("input[name='countryOfOrigin']").value
-        // const inputTeamId = document.querySelector("input[name='teamSelectOption']").value
-
+        
+        // event listener for dropdown menu change event--still not working, argh
+        const teamId = ""
+        mainContainer.addEventListener(
+            "change",
+            (event) => {
+                if (event.target.id === "teamSelectOption") {
+                    teamId = event.target.value
+                }
+            }
+        )
+        
+        
+        const inputTeamId = teamId
+        
         const DataForAPI = {
             firstName: inputFirstName,
             lastName: inputLastName,
             country: inputCountry,
-            // teamId: inputTeamId
+            teamId: inputTeamId
 
         }
         // call Post API function on sendDataToAPI
