@@ -1,4 +1,5 @@
 import { newPlayerForm } from "./Providers/PlayerProvider.js";
+import { scoreProvider } from "./Providers/ScoreProvider.js";
 import { newTeamForm } from "./Providers/TeamProvider.js";
 import { teamOptionList } from "./Lists/TeamList.js";
 // import {  } from "module";
@@ -12,11 +13,11 @@ export const TruncheonsFlagons = () => {
     <h1>Truncheons and Flagons</h1>
     <div class="truncheons__container">
     <article class="choices">
-        <section class="new__player">
+        <section class="new__player data">
             <h2>New Player</h2>
             ${newPlayerForm()}
         </section>
-        <section class="new__team">
+        <section class="new__team data">
             <h2>New Team</h2>
             ${newTeamForm()}
         </section>
@@ -26,7 +27,12 @@ export const TruncheonsFlagons = () => {
         <button class="button" id="start__button">Start Game</button>
         </section>
 
-        <section class="new__leaderboard">
+        <section class="new__score data">
+            <h2>Team Score</h2>
+            ${scoreProvider()}
+        </section>
+
+        <section class="new__leaderboard data">
             <h2>Leaderboard</h2>
         </section>
     </div>
