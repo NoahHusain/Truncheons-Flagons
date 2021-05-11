@@ -1,6 +1,7 @@
 
 export const TeamList = () => {
     return "Team List"
+}
 
 import { getTeams } from "../databaseAccess.js"
 
