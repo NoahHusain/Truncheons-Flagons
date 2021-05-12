@@ -20,9 +20,9 @@ export const Leaderboard = () => {
     let html = `<div class="team__columnHeader">
             <table class="table">
                 <tr>
-                    <th><u>Team</u></th>
-                    <th>Players</th>
-                    <th>Score</th>
+                    <th class="table__header"><u>Team</u></th>
+                    <th class="table__header"><u>Players</u></th>
+                    <th class="table__header"><u>Score</u></th>
                 </tr>
         `
 

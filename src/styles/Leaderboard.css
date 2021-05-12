@@ -1,5 +1,13 @@
 .table {
-    background-color:rgba(240, 211, 169, 0.5);
+    background-color:rgba(240, 211, 169, 0.4);
+    border: 1px solid black;
+    box-shadow: 0px 0px 10px rgb(107, 81, 10);
+    border-radius: 1rem;
+}
+
+.table__header {
+    font-family: 'MedievalSharp', cursive;
+    font-weight: bolder;
 }
 
 th, td {
