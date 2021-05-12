@@ -1,28 +1,34 @@
 // get current list of teams from app state in database
-import { getTeams, postScores, setScores } from "../databaseAccess.js"
+import { getTeams, postScores, setScores, getTeam1CurrentScore, getTeam2CurrentScore, getTeam3CurrentScore } from "../databaseAccess.js"
 
 const mainContainer = document.querySelector("#container")
 
-const foundTeam1 = teams.find(team => team.id === team1current.teamId)
-const foundTeam2 = teams.find(team => team.id === team2current.teamId)
-const foundTeam3 = teams.find(team => team.id === team3current.teamId)
+
 
 // could you grab team names like this? ${getTeams.teams[0]}
 export const scoreProvider = () => {
+    const teams = getTeams()
+    const team1current = getTeam1CurrentScore()
+    const foundTeam1 = teams.find(team => team.id === team1current.teamId)
+    const team2current = getTeam2CurrentScore()
+    const foundTeam2 = teams.find(team => team.id === team2current.teamId)
+    const team3current = getTeam3CurrentScore()
+    const foundTeam3 = teams.find(team => team.id === team3current.teamId)
+
     let html = `
     <div class="field">
         <label class="label" for="teamScore">${foundTeam1.name} Score:</label>
-        <input type="text" name="teamScore" id="team1Score"/>
+        <input type="text" name="team1Score" id="team1Score"/>
     </div>
 
     <div class="field">
         <label class="label" for="teamScore">${foundTeam2.name} Score:</label>
-        <input type="text" name="teamScore" id="team2Score"/>
+        <input type="text" name="team2Score" id="team2Score"/>
     </div>
 
     <div class="field">
         <label class="label" for="teamScore">${foundTeam3.name} Score:</label>
-        <input type="text" name="teamScore" id="team3Score"/>
+        <input type="text" name="team3Score" id="team3Score"/>
     </div>
  
     <button class="button" id="submitScores">Submit Score</button> 
