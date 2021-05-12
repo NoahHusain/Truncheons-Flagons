@@ -1,6 +1,7 @@
+import { Leaderboard } from "./Lists/ScoreList.js";
 import { newPlayerForm } from "./Providers/PlayerProvider.js";
 import { newTeamForm } from "./Providers/TeamProvider.js";
-// import {  } from "module";
+
 
 
 // Import all functions that render HMTL. 
@@ -21,6 +22,7 @@ export const TruncheonsFlagons = () => {
 
         <section class="new__leaderboard">
             <h2>Leaderboard</h2>
+            ${Leaderboard()}
         </section>
 
         <section class="start__game">
