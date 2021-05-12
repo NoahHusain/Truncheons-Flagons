@@ -20,7 +20,9 @@ export const newPlayerForm = () => {
 
     <div class="field">
         <label class="label" for="teamSelection">Select a team:</label>
+        <select id="teamSelection" class="dropdownList">
             ${teamOptionList()}
+            </select>
     </div>
  
  
