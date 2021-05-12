@@ -16,6 +16,9 @@
       "dateCreated": "01/05/2021"
     },
     {
+
+      "dateCreated": "5/11/2021, 6:15:28 PM",
+      "name": "The Lotus Eaters",
       "dateCreated": 1620777775650,
       "name": "Void Vision",
       "id": 4
@@ -84,6 +87,211 @@
       "lastName": "Hardy",
       "country": "Spain",
       "teamId": 3
+    },
+    {
+      "firstName": "Alexander",
+      "lastName": "Lambrow",
+      "country": "United States",
+      "teamId": "--choose one!--",
+      "id": 10
+    },
+    {
+      "firstName": "Alexander",
+      "lastName": "Lambrow",
+      "country": "United States",
+      "teamId": null,
+      "id": 11
+    },
+    {
+      "firstName": "Alexander",
+      "lastName": "Lambrow",
+      "country": "United States",
+      "teamId": {},
+      "id": 12
+    },
+    {
+      "firstName": "Alexander",
+      "lastName": "Lambrow",
+      "country": "United States",
+      "teamId": "1",
+      "id": 13
+    },
+    {
+      "firstName": "Alexander",
+      "lastName": "Lambrow",
+      "country": "United States",
+      "teamId": "1",
+      "id": 14
+    },
+    {
+      "firstName": "Alexander",
+      "lastName": "Lambrow",
+      "country": "United States",
+      "teamId": "1",
+      "id": 15
+    },
+    {
+      "firstName": "Alexander",
+      "lastName": "Lambrow",
+      "country": "United States",
+      "teamId": "",
+      "id": 16
+    },
+    {
+      "firstName": "Alexander",
+      "lastName": "Lambrow",
+      "country": "United States",
+      "teamId": "1",
+      "id": 17
+    },
+    {
+      "firstName": "Alexander",
+      "lastName": "Lambrow",
+      "country": "United States",
+      "teamId": "1",
+      "id": 18
+    },
+    {
+      "firstName": "Alexander",
+      "lastName": "Lambrow",
+      "country": "United States",
+      "teamId": "1",
+      "id": 19
+    },
+    {
+      "firstName": "Alexander",
+      "lastName": "Lambrow",
+      "country": "United States",
+      "teamId": "1",
+      "id": 20
+    },
+    {
+      "firstName": "Alexander",
+      "lastName": "Lambrow",
+      "country": "United States",
+      "teamId": "1",
+      "id": 21
+    },
+    {
+      "firstName": "Alexander",
+      "lastName": "Lambrow",
+      "country": "United States",
+      "teamId": "1",
+      "id": 22
+    },
+    {
+      "firstName": "Alexander",
+      "lastName": "Lambrow",
+      "country": "United States",
+      "id": 23
+    },
+    {
+      "firstName": "Alexander",
+      "lastName": "Lambrow",
+      "country": null,
+      "id": 24
+    },
+    {
+      "firstName": "Alexander",
+      "lastName": "Lambrow",
+      "country": null,
+      "id": 25
+    },
+    {
+      "firstName": "Alexander",
+      "lastName": "Lambrow",
+      "country": null,
+      "id": 26
+    },
+    {
+      "firstName": "Alexander",
+      "lastName": "Lambrow",
+      "country": "United States",
+      "teamId": "1",
+      "id": 27
+    },
+    {
+      "firstName": "Alexander",
+      "lastName": "Lambrow",
+      "country": "United States",
+      "teamId": "1",
+      "id": 28
+    },
+    {
+      "firstName": "Alexander",
+      "lastName": "Lambrow",
+      "country": "United States",
+      "teamId": "--choose one!--",
+      "id": 29
+    },
+    {
+      "firstName": "Alexander",
+      "lastName": "Lambrow",
+      "country": "United States",
+      "teamId": "--choose one!--",
+      "id": 30
+    },
+    {
+      "firstName": "Alexander",
+      "lastName": "Lambrow",
+      "country": "United States",
+      "id": 31
+    },
+    {
+      "firstName": "Alexander",
+      "lastName": "Lambrow",
+      "country": "United States",
+      "teamId": "",
+      "id": 32
+    },
+    {
+      "firstName": "Alexander",
+      "lastName": "Lambrow",
+      "country": {},
+      "teamId": "1",
+      "id": 33
+    },
+    {
+      "firstName": "Alexander",
+      "lastName": "Lambrow",
+      "country": {},
+      "teamId": "1",
+      "id": 34
+    },
+    {
+      "firstName": "Alexander",
+      "lastName": "Lambrow",
+      "country": "United States",
+      "teamId": {},
+      "id": 35
+    },
+    {
+      "firstName": "Alexander",
+      "lastName": "Lambrow",
+      "country": "United States",
+      "teamId": "1",
+      "id": 36
+    },
+    {
+      "firstName": "Alexander",
+      "lastName": "Lambrow",
+      "country": "United States",
+      "teamId": "1",
+      "id": 37
+    },
+    {
+      "firstName": "Alexander",
+      "lastName": "Lambrow",
+      "country": "United States",
+      "teamId": "3",
+      "id": 38
+    },
+    {
+      "firstName": "Alexander",
+      "lastName": "Lambrow",
+      "country": "United States",
+      "teamId": 2,
+      "id": 39
     }
   ],
   "scores": [
