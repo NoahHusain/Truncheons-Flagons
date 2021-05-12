@@ -64,6 +64,10 @@ export const setScores = (score1, score2, score3) => {
     applicationState.currentScores.push(score3)
 }
 
+export const setApplicationState = (state) => {
+    applicationState = state
+}
+
 export const postScores = () => {
     const newScoreCreated = {
         teamId: applicationState.teams,

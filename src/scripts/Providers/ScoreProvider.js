@@ -1,5 +1,5 @@
 // get current list of teams from app state in database
-import { getTeams, getTeam1CurrentScore, getTeam2CurrentScore, getTeam3CurrentScore, setTeam1score, setTeam2score, setTeam3score, getCurrentRound, setCurrentRound } from "../databaseAccess.js"
+import { getTeams, getTeam1CurrentScore, getTeam2CurrentScore, getTeam3CurrentScore, setTeam1score, setTeam2score, setTeam3score, getCurrentRound, setCurrentRound, setApplicationState, postScores } from "../databaseAccess.js"
 import { currentGame } from "../Stats/Score.js";
 import { TruncheonsFlagons } from "../TruncheonsFlagons.js";
 
