@@ -80,7 +80,7 @@ const countTeamPlayers = () => {
         // If current team has players OR not
         // Adding playerCount key/value pair to teams object
         teams[teamIndex].playerCount = !teams[teamIndex].playerCount ?
-            1 // if we havent started counting for this team, start at one
+            1 // if we havent started counting for this team
             :
             teams[teamIndex].playerCount + 1; // otherwise add one
     })
