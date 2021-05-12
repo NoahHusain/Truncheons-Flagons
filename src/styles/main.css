@@ -1,4 +1,6 @@
 @import "../styles/playerinput.css";
+@import url("./currentgame.css");
+
 
 body {
     font-family: 'Montserrat', sans-serif;
@@ -9,7 +11,7 @@ body {
     background-color: blanchedalmond;
 }
 
-h1, h2 {
+h1, h2, h3 {
     font-family: 'MedievalSharp', cursive;
     text-align: center;
 }

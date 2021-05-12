@@ -1,0 +1,10 @@
+.currentGame {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.teamscore__item {
+    display: flex;
+    justify-content: space-between;
+}

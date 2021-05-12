@@ -68,12 +68,15 @@ export const getTeam3CurrentScore = () => {
 
 export const setTeam1id = (id) => {
     applicationState.team1CurrentScore.teamId = id
+    applicationState.team1CurrentScore.score = 0
 }
 
 export const setTeam2id = (id) => {
     applicationState.team2CurrentScore.teamId = id
+    applicationState.team2CurrentScore.score = 0
 }
 
 export const setTeam3id = (id) => {
     applicationState.team3CurrentScore.teamId = id
+    applicationState.team3CurrentScore.score = 0
 }

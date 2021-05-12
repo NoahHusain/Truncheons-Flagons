@@ -2,6 +2,7 @@ import { getTeam1CurrentScore, getTeam2CurrentScore, getTeam3CurrentScore, getTe
 import { scoreProvider } from "../Providers/ScoreProvider.js"
 import { newTeamForm } from "../Providers/TeamProvider.js";
 import { newPlayerForm } from "../Providers/PlayerProvider.js";
+import { currentGame } from "../Stats/Score.js";
 
 // function to create team list items for team dropdown menu
 export const teamOptionList = () => {
@@ -20,22 +21,20 @@ const teamListItem = (team) => {
 
 export const selectGameplayTeams = () => {
     return `
+    <h2>Select your teams!</h2>
     <div class="gameplay__team___dropdowns">
     <div class="gameplay__team__dropdown">
     <select name="teamSelection1" class="dropdownList">
-            <option class="teamSelectOption" value="">--choose one!--</option>
             ${teamOptionList()}
         </select>
     </div>
     <div class="gameplay__team__dropdown">
     <select name="teamSelection2" class="dropdownList">
-            <option class="teamSelectOption" value="">--choose one!--</option>
             ${teamOptionList()}
         </select>
         </div>
         <div class="gameplay__team__dropdown">
     <select name="teamSelection3" class="dropdownList">
-            <option class="teamSelectOption" value="">--choose one!--</option>
             ${teamOptionList()}
         </select>
         </div>
@@ -77,6 +76,7 @@ mainContainer.addEventListener("change", changeEvent => {
         
         <section class="game__play">
         ${scoreProvider()}
+        ${currentGame()}
         </section>
 
         <section class="new__leaderboard">
