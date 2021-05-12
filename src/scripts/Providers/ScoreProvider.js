@@ -93,6 +93,7 @@ mainContainer.addEventListener(
         if (clickEvent.target.id === 'submitScores' && currentRound > 3) {
             const gameOverEvent = new CustomEvent("gameOver")
             // post the final scores of the game
+            
             // clear the data of the temp states
             const applicationState = {
                 teams: [],
