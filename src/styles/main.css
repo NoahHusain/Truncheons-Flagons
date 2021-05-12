@@ -1,3 +1,5 @@
+@import url("./currentgame.css");
+
 body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
@@ -7,7 +9,7 @@ body {
     background-color: blanchedalmond;
 }
 
-h1, h2 {
+h1, h2, h3 {
     font-family: 'MedievalSharp', cursive;
     text-align: center;
     padding-top: 1rem;
@@ -37,21 +39,24 @@ h1, h2 {
 }
 
 
-
-
-
 .new__leaderboard {
     flex: 1;
 }
 
 .game__play {
     flex: 2;
+    margin: 2rem;
+    text-align: center;
 }
 
 .button {
     display: block;
     margin-bottom: .5rem;
     margin-left: 2rem;
+}
+
+#start__button {
+    margin: 0 auto;
 }
 
 .gameplay__team__dropdowns {

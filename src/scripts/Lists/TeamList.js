@@ -21,6 +21,7 @@ const teamListItem = (team) => {
 
 export const selectGameplayTeams = () => {
     return `
+    <h2>Select your teams!</h2>
     <div class="gameplay__team___dropdowns">
     <div class="gameplay__team__dropdown">
     <select name="teamSelection1" class="dropdownList">

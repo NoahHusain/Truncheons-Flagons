@@ -21,7 +21,7 @@ export const currentGame = () => {
     </div>
     <div class="teamscore__item" class="team1score__item">
     <div class="team1">${foundTeam3.name}</div>
-    <div class="team1score">${foundTeam3.score} </div>
+    <div class="team1score">${team3current.score} </div>
     </div>
     </section>`
 }
