@@ -7,12 +7,15 @@ import { newPlayerForm } from "../Providers/PlayerProvider.js";
 export const teamOptionList = () => {
     const teamsArray = getTeams()
     return `
+        <select id="teamSelection" class="dropdownList">
+        <option>--choose one!--</option>
         ${ teamsArray.map(teamListItem).join("\n") }
+        </select>
     `
 }
 
 const teamListItem = (team) => {
-    return `<option class="teamSelectOption" value="${team.id}">${team.name}</option>`
+    return `<option value="${team.id}">${team.name}</option>`
 }
 
 
