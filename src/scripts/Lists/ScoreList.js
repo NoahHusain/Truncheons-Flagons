@@ -17,24 +17,32 @@ export const Leaderboard = () => {
     countTeamScores()
     countTeamPlayers()
 
-    let html = `<div class="team__columnHeader team__name">`
+    // Sorting teams by highest score
+    teams.sort(function (teamA, teamB) {
+        return teamB.score - teamA.score
+    })
+
+    let html = `<div class="team__columnHeader">
+            <table class="table">
+                <tr>
+                    <th class="table__header"><u>Team</u></th>
+                    <th class="table__header"><u>Players</u></th>
+                    <th class="table__header"><u>Score</u></th>
+                </tr>
+        `
 
     html += teams.map((teamObject) => {
         return `
-                <ul>
-                    <li>${teamObject.name}</li>
-                </ul>
-                <ul>
-                    <li>${teamObject.playerCount}</li>
-                </ul>
-                <ul>
-                    <li>${teamObject.score}</li>
-                </ul>
+                <tr>
+                    <td class="table__name">${teamObject.name}</td>
+                    <td class="table__players table__value">${teamObject.playerCount}</td>
+                    <td class="table__score table__value">${teamObject.score}</td>
+                </tr>
         `
     }).join("")
         
 
-    html += `</div>`
+    html += `</table></div>`
     return html
 }
 
@@ -49,6 +57,7 @@ const countTeamScores =  () => {
     scores.forEach((score) => {
         // Find index of team.id equal to score.teamId
         const teamIndex = teams.findIndex(team => team.id === score.teamId)
+        
 
         // If current team or NEW team
         // Adding score key/value pair to teams object
@@ -58,7 +67,6 @@ const countTeamScores =  () => {
             teams[teamIndex].score + score.score; // otherwise add the score
     })
 }
-
 
 
 
@@ -72,7 +80,7 @@ const countTeamPlayers = () => {
         // If current team has players OR not
         // Adding playerCount key/value pair to teams object
         teams[teamIndex].playerCount = !teams[teamIndex].playerCount ?
-            1 // if we havent started counting for this team, start at one
+            1 // if we havent started counting for this team
             :
             teams[teamIndex].playerCount + 1; // otherwise add one
     })

@@ -14,11 +14,6 @@
       "id": 3,
       "name": "Helgen",
       "dateCreated": "01/05/2021"
-    },
-    {
-      "dateCreated": "5/12/2021, 11:18:42 AM",
-      "name": "Hrothgar",
-      "id": 4
     }
   ],
   "players": [
@@ -31,66 +26,59 @@
     },
     {
       "id": 2,
-      "name": "Fletcher",
+      "firstName": "Fletcher",
       "lastName": "Carr",
       "country": "Austria",
       "teamId": 2
     },
     {
       "id": 3,
-      "name": "Brooke",
+      "firstName": "Brooke",
       "lastName": "Mooney",
       "country": "Denmark",
       "teamId": 1
     },
     {
       "id": 4,
-      "name": "Cedric",
+      "firstName": "Cedric",
       "lastName": "Graham",
       "country": "Sweden",
       "teamId": 1
     },
     {
       "id": 5,
-      "name": "Griffin",
+      "firstName": "Griffin",
       "lastName": "Cash",
       "country": "Norway",
       "teamId": 3
     },
     {
       "id": 6,
-      "name": "Nathan",
+      "firstName": "Nathan",
       "lastName": "Graham",
       "country": "New Zealand",
       "teamId": 2
     },
     {
       "id": 7,
-      "name": "Bill",
+      "firstName": "Bill",
       "lastName": "Vance",
       "country": "Russia",
       "teamId": 3
     },
     {
       "id": 8,
-      "name": "Neil",
+      "firstName": "Neil",
       "lastName": "Diamond",
       "country": "Russia",
       "teamId": 2
     },
     {
       "id": 9,
-      "name": "Ellen",
+      "firstName": "Ellen",
       "lastName": "Hardy",
       "country": "Spain",
       "teamId": 3
-    },
-    {
-      "firstName": "Jane",
-      "lastName": "Doe",
-      "country": "Denmark",
-      "teamId": 1,
-      "id": 10
     }
   ],
   "scores": [
@@ -147,12 +135,6 @@
       "teamId": 3,
       "score": 1,
       "timestamp": 1620238792447
-    },
-    {
-      "id": 10,
-      "teamId": 4,
-      "score": 0,
-      "timestamp": 1620836322745
     }
   ]
 }
