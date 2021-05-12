@@ -2,7 +2,7 @@ const applicationState =  {
     teams: [],
     players: [],
     scores: [],
-    currentScores: []
+    currentScores: [1, 2, 3]
 }
 
 
