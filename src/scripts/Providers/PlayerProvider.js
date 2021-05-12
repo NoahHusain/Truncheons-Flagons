@@ -20,10 +20,7 @@ export const newPlayerForm = () => {
 
     <div class="field">
         <label class="label" for="teamSelection">Select a team:</label>
-        <select name="teamSelection" class="dropdownList">
-            <option class="teamSelectOption" value="">--choose one!--</option>
             ${teamOptionList()}
-        </select>
     </div>
  
  
@@ -32,4 +29,49 @@ export const newPlayerForm = () => {
     return html
 }
 
+// Event listener for submitPlayer click event
+const mainContainer = document.querySelector("#container")
+mainContainer.addEventListener("click", clickEvent => {
 
+    if (clickEvent.target.id === "submitPlayer") {
+
+        // grab user input
+        const inputFirstName = document.querySelector("input[name='firstName']").value
+        const inputLastName = document.querySelector("input[name='lastName']").value
+        const inputCountry = document.querySelector("input[name='countryOfOrigin']").value
+        
+        // function to access id of option element below
+        // Do I need an event listener here?
+
+        const inputTeamId = parseInt(document.querySelector("#teamSelection").value)
+        
+        
+        
+        const DataForAPI = {
+            firstName: inputFirstName,
+            lastName: inputLastName,
+            country: inputCountry,
+            teamId: inputTeamId
+
+        }
+        // call Post API function on sendDataToAPI
+        sendPlayerToAPI(DataForAPI)
+    }
+})
+
+
+const sendPlayerToAPI = (playerObject) => {
+    const fetchOptions = {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(playerObject)
+    }
+
+    return fetch("http://localhost:8088/players", fetchOptions)
+        .then(response => response.json())
+        .then(() => {
+            mainContainer.dispatchEvent(new CustomEvent("stateChanged"))
+        })
+}

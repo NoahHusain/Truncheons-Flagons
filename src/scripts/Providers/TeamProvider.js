@@ -1,5 +1,4 @@
 import { getTeams } from "../databaseAccess.js"
-import { newPlayerForm } from "./PlayerProvider.js"
 
 // render function for new team form
 export const newTeamForm = () => {
@@ -14,24 +13,20 @@ export const newTeamForm = () => {
     return html
 }
 
-const mainContainer = document.querySelector("#container")
 
+// Event Listener for submitTeam click event
+const mainContainer = document.querySelector("#container")
 mainContainer.addEventListener("click", clickEvent => {
 
     if (clickEvent.target.id === "submitTeam") {
 
         // grab user input
         const inputTeamName = document.querySelector("input[name='teamName']").value
-        const creationDate = Date.now()
-
-        // generate new id
-        const teamsArray = getTeams()
-        const newTeamId = teamsArray.length + 1;
+        const creationDate = new Date(Date.now()).toLocaleString("en-US")
     
         const DataForAPI = {
             dateCreated: creationDate,
             name: inputTeamName,
-            id: newTeamId
         }
         // call Post API function on sendDataToAPI
         sendTeamToAPI(DataForAPI)
