@@ -1,7 +1,5 @@
 import { getTeam1CurrentScore, getTeam2CurrentScore, getTeam3CurrentScore, getTeams, setTeam1id, setTeam2id, setTeam3id } from "../databaseAccess.js"
 import { scoreProvider } from "../Providers/ScoreProvider.js"
-import { newTeamForm } from "../Providers/TeamProvider.js";
-import { newPlayerForm } from "../Providers/PlayerProvider.js";
 import { currentGame } from "../Stats/Score.js";
 
 // function to create team list items for team dropdown menu
@@ -46,14 +44,34 @@ const mainContainer = document.querySelector("#container")
 mainContainer.addEventListener("change", changeEvent => {
     if (changeEvent.target.name === "teamSelection1") {
         setTeam1id(parseInt(changeEvent.target.value))
-        const teamSelection1 = document.querySelector("#teamSelection1")
-        teamSelection1.style.display = "none";
+        const team1CurrentScore = getTeam1CurrentScore()
+        const team2CurrentScore = getTeam2CurrentScore()
+        const team3CurrentScore = getTeam3CurrentScore()
+        if (team1CurrentScore.teamId > 0 &&
+            team2CurrentScore.teamId > 0 &&
+            team3CurrentScore.teamId > 0) {
+            const gamePlay = document.querySelector(".game__play")
+                gamePlay.innerHTML = `
+                ${scoreProvider()}
+                ${currentGame()}`
+        }
     }
 })
 
 mainContainer.addEventListener("change", changeEvent => {
     if (changeEvent.target.name === "teamSelection2") {
         setTeam2id(parseInt(changeEvent.target.value))
+        const team1CurrentScore = getTeam1CurrentScore()
+        const team2CurrentScore = getTeam2CurrentScore()
+        const team3CurrentScore = getTeam3CurrentScore()
+        if (team1CurrentScore.teamId > 0 &&
+            team2CurrentScore.teamId > 0 &&
+            team3CurrentScore.teamId > 0) {
+            const gamePlay = document.querySelector(".game__play")
+                gamePlay.innerHTML = `
+                ${scoreProvider()}
+                ${currentGame()}`
+        }
     }
 })
 
@@ -66,29 +84,10 @@ mainContainer.addEventListener("change", changeEvent => {
         if (team1CurrentScore.teamId > 0 &&
             team2CurrentScore.teamId > 0 &&
             team3CurrentScore.teamId > 0) {
-            mainContainer.innerHTML = `
-                <h1>Truncheons and Flagons</h1>
-                <div class="truncheons__container">
-                <article class="choices">
-                <section class="new__player">
-                <h2>New Player</h2>
-                ${newPlayerForm()}
-                </section>
-                <section class="new__team">
-                <h2>New Team</h2>
-                ${newTeamForm()}
-                </section>
-                </article>
-                
-                <section class="game__play">
+            const gamePlay = document.querySelector(".game__play")
+                gamePlay.innerHTML = `
                 ${scoreProvider()}
-                ${currentGame()}
-                </section>
-                
-                <section class="new__leaderboard">
-                <h2>Leaderboard</h2>
-                </section>
-                </div>`
+                ${currentGame()}`
         }
     }
 }

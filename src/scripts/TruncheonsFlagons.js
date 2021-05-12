@@ -1,6 +1,5 @@
 import { Leaderboard } from "./Lists/ScoreList.js";
 import { newPlayerForm } from "./Providers/PlayerProvider.js";
-import { scoreProvider } from "./Providers/ScoreProvider.js";
 import { newTeamForm } from "./Providers/TeamProvider.js";
 import { selectGameplayTeams } from "./Lists/TeamList.js";
 // import {  } from "module";
@@ -40,31 +39,7 @@ export const TruncheonsFlagons = () => {
 mainContainer.addEventListener("click",
     clickEvent => {
         if (clickEvent.target.id === "start__button") {
-
-            // Re-render TruncheonsFlagons html with the team list dropdowns replacing the start button
-
-            mainContainer.innerHTML = `
-            <h1>Truncheons and Flagons</h1>
-    <div class="truncheons__container">
-    <article class="choices">
-        <section class="new__player">
-            <h2>New Player</h2>
-            ${newPlayerForm()}
-        </section>
-        <section class="new__team">
-            <h2>New Team</h2>
-            ${newTeamForm()}
-        </section>
-        </article>
-        
-        <section class="game__play">
-        ${selectGameplayTeams()}
-        </section>
-
-        <section class="new__leaderboard">
-            <h2>Leaderboard</h2>
-        </section>
-    </div>
-            `
+            const gamePlay = document.querySelector(".game__play")
+            gamePlay.innerHTML = `${selectGameplayTeams()}`
         }
     })
