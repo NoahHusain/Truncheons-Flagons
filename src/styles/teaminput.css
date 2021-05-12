@@ -1,0 +1,15 @@
+.new__team {
+    padding: .5rem .5rem;
+    border: .3rem dotted rgb(49, 48, 49);
+    border-radius: 5%;
+    margin: 1rem 0rem;
+}
+
+#submitTeam {
+    display: block;
+    text-align: center;
+    margin: 1rem auto .5rem auto;
+    font-family: 'MedievalSharp', cursive;
+    padding: .3rem .3rem;
+    font-size: larger;
+}
