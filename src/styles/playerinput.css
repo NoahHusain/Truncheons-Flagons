@@ -1,0 +1,42 @@
+.new__player {
+    padding: 1rem .5rem;
+    border: .3rem dotted rgb(49, 48, 49);
+    border-radius: 5%;
+}
+
+.field {
+    margin: .5rem;
+}
+
+#teamSelection {
+    margin: .5rem 0rem;
+}
+
+.label {
+    font-family: 'MedievalSharp', cursive;
+    font-weight: bold;
+}
+
+.dropdownList {
+    font-family: 'MedievalSharp', cursive;
+    padding: .2rem;
+    font-size: large;
+}
+
+
+#submitPlayer {
+    display: block;
+    text-align: center;
+    margin-left: .5rem;
+    margin-top: 1rem;
+}
+
+.gameplay__team__dropdowns {
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdownList {
+    display: block;
+    margin: 1rem auto;
+}
