@@ -90,15 +90,16 @@ mainContainer.addEventListener(
     "click",
     (clickEvent) => {
         const currentRound = getCurrentRound()
-        if (clickEvent.target.id === 'submitScores' && currentRound > 2) {
+        if (clickEvent.target.id === 'submitScores' && currentRound > 3) {
             const gameOverEvent = new CustomEvent("gameOver")
-            console.log('EVENT DISPATCHED')
+            // post the final scores of the game
+            // clear the data of the temp states
             mainContainer.dispatchEvent(gameOverEvent)
         }
     }
     )
 
 
-mainContainer.addEventListener('gameOverEvent', customEvent => {
+mainContainer.addEventListener('gameOver', customEvent => {
      mainContainer.innerHTML = TruncheonsFlagons()
  })
