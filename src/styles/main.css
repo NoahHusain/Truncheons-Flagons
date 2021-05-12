@@ -1,4 +1,9 @@
+body {
+    font-family: 'Montserrat', sans-serif;;
+}
+
 h1, h2 {
+    font-family: 'MedievalSharp', cursive;
     text-align: center;
 }
 
@@ -21,4 +26,15 @@ h1, h2 {
 
 .button {
     display: block;
+    margin: 5rem auto;
+}
+
+.gameplay__team__dropdowns {
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdownList {
+    display: block;
+    margin: 1rem auto;
 }

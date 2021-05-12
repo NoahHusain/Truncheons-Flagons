@@ -1,5 +1,5 @@
-  {
-    "teams": [
+{
+  "teams": [
     {
       "id": 1,
       "name": "Windhelm",
@@ -79,6 +79,13 @@
       "lastName": "Hardy",
       "country": "Spain",
       "teamId": 3
+    },
+    {
+      "firstName": "Jane",
+      "lastName": "Doe",
+      "country": "Denmark",
+      "teamId": 1,
+      "id": 10
     }
   ],
   "scores": [
@@ -138,4 +145,3 @@
     }
   ]
 }
-
