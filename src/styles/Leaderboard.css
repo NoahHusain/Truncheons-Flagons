@@ -1,0 +1,11 @@
+.table {
+    background-color:rgba(240, 211, 169, 0.5);
+}
+
+th, td {
+    padding: 0.5rem;
+  }
+
+.table__value {
+    text-align: center;
+}

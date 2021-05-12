@@ -17,29 +17,46 @@ export const Leaderboard = () => {
     countTeamScores()
     countTeamPlayers()
 
-    let html = `<div class="team__columnHeader team__name">`
+    let html = `<div class="team__columnHeader">
+            <table class="table">
+                <tr>
+                    <th><u>Team</u></th>
+                    <th>Players</th>
+                    <th>Score</th>
+                </tr>
+        `
 
     html += teams.map((teamObject) => {
         return `
-                <ul>
-                    <li>${teamObject.name}</li>
-                </ul>
-                <ul>
-                    <li>${teamObject.playerCount}</li>
-                </ul>
-                <ul>
-                    <li>${teamObject.score}</li>
-                </ul>
+                <tr>
+                    <td class="table__name">${teamObject.name}</td>
+                    <td class="table__players table__value">${teamObject.playerCount}</td>
+                    <td class="table__score table__value">${teamObject.score}</td>
+                </tr>
         `
     }).join("")
         
 
-    html += `</div>`
+    html += `</table></div>`
     return html
 }
 
 
-
+        // <div class="team__name">
+        //     <ul>
+        //         <li></li>
+        //     </ul>
+        // </div>
+        // <div class="team__playerCount">
+        //     <ul>
+        //         <li></li>
+        //     </ul>
+        // </div>
+        // <div class="team__score">
+        //     <ul>
+        //         <li></li>
+        //     </ul>
+        // </div>
 
 
 
