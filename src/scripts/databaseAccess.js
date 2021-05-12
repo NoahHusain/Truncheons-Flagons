@@ -1,37 +1,40 @@
-const applicationState =  {
+const applicationState = {
     teams: [],
     players: [],
     scores: [],
-    currentScores: [1, 2, 3]
+    currentScores: [],
+    team1CurrentScore: {},
+    team2CurrentScore: {},
+    team3CurrentScore: {}
 }
 
 
 
 // API fetch functions
 export const fetchTeams = () => {
-    return fetch ("http://localhost:8088/teams")
-    .then(response => response.json())
-    .then(data => {
-        applicationState.teams = data
-    })
+    return fetch("http://localhost:8088/teams")
+        .then(response => response.json())
+        .then(data => {
+            applicationState.teams = data
+        })
 }
 
 
 export const fetchPlayers = () => {
-    return fetch ("http://localhost:8088/players")
-    .then(response => response.json())
-    .then(data => {
-        applicationState.players = data
-    })
+    return fetch("http://localhost:8088/players")
+        .then(response => response.json())
+        .then(data => {
+            applicationState.players = data
+        })
 }
 
 
 export const fetchScores = () => {
-    return fetch ("http://localhost:8088/scores")
-    .then(response => response.json())
-    .then(data => {
-        applicationState.scores = data
-    })
+    return fetch("http://localhost:8088/scores")
+        .then(response => response.json())
+        .then(data => {
+            applicationState.scores = data
+        })
 }
 
 
@@ -68,3 +71,24 @@ export const postScores = (scoreObject) => {
     })
 }
 
+export const getTeam1CurrentScore = () => {
+    return {...applicationState.team1CurrentScore}
+}
+export const getTeam2CurrentScore = () => {
+    return {...applicationState.team2CurrentScore}
+}
+export const getTeam3CurrentScore = () => {
+    return {...applicationState.team3CurrentScore}
+}
+
+export const setTeam1id = (id) => {
+    applicationState.team1CurrentScore.teamId = id
+}
+
+export const setTeam2id = (id) => {
+    applicationState.team2CurrentScore.teamId = id
+}
+
+export const setTeam3id = (id) => {
+    applicationState.team3CurrentScore.teamId = id
+}

@@ -1,5 +1,6 @@
 {
   "teams": [
+<<<<<<< HEAD
       {
           "id": 1,
           "name": "Windhelm",
@@ -136,5 +137,148 @@
           "score": 1,
           "timestamp": 1620238792447
       }
+=======
+    {
+      "id": 1,
+      "name": "Windhelm",
+      "dateCreated": "04/23/2021"
+    },
+    {
+      "id": 2,
+      "name": "Riften",
+      "dateCreated": "03/12/2021"
+    },
+    {
+      "id": 3,
+      "name": "Helgen",
+      "dateCreated": "01/05/2021"
+    },
+    {
+      "dateCreated": 1620777775650,
+      "name": "Void Vision",
+      "id": 4
+    }
+  ],
+  "players": [
+    {
+      "id": 1,
+      "firstName": "Milo",
+      "lastName": "French",
+      "country": "Algeria",
+      "teamId": 1
+    },
+    {
+      "id": 2,
+      "name": "Fletcher",
+      "lastName": "Carr",
+      "country": "Austria",
+      "teamId": 2
+    },
+    {
+      "id": 3,
+      "name": "Brooke",
+      "lastName": "Mooney",
+      "country": "Denmark",
+      "teamId": 1
+    },
+    {
+      "id": 4,
+      "name": "Cedric",
+      "lastName": "Graham",
+      "country": "Sweden",
+      "teamId": 1
+    },
+    {
+      "id": 5,
+      "name": "Griffin",
+      "lastName": "Cash",
+      "country": "Norway",
+      "teamId": 3
+    },
+    {
+      "id": 6,
+      "name": "Nathan",
+      "lastName": "Graham",
+      "country": "New Zealand",
+      "teamId": 2
+    },
+    {
+      "id": 7,
+      "name": "Bill",
+      "lastName": "Vance",
+      "country": "Russia",
+      "teamId": 3
+    },
+    {
+      "id": 8,
+      "name": "Neil",
+      "lastName": "Diamond",
+      "country": "Russia",
+      "teamId": 2
+    },
+    {
+      "id": 9,
+      "name": "Ellen",
+      "lastName": "Hardy",
+      "country": "Spain",
+      "teamId": 3
+    }
+  ],
+  "scores": [
+    {
+      "id": 1,
+      "teamId": 1,
+      "score": 2,
+      "timestamp": 1614659931693
+    },
+    {
+      "id": 2,
+      "teamId": 2,
+      "score": 1,
+      "timestamp": 1614659931693
+    },
+    {
+      "id": 3,
+      "teamId": 3,
+      "score": 1,
+      "timestamp": 1614659931693
+    },
+    {
+      "id": 4,
+      "teamId": 1,
+      "score": 0,
+      "timestamp": 1620238696239
+    },
+    {
+      "id": 5,
+      "teamId": 2,
+      "score": 1,
+      "timestamp": 1620238696239
+    },
+    {
+      "id": 6,
+      "teamId": 3,
+      "score": 2,
+      "timestamp": 1620238696239
+    },
+    {
+      "id": 7,
+      "teamId": 1,
+      "score": 1,
+      "timestamp": 1620238792447
+    },
+    {
+      "id": 8,
+      "teamId": 2,
+      "score": 1,
+      "timestamp": 1620238792447
+    },
+    {
+      "id": 9,
+      "teamId": 3,
+      "score": 1,
+      "timestamp": 1620238792447
+    }
+>>>>>>> main
   ]
 }

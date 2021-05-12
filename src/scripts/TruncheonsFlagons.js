@@ -1,7 +1,7 @@
 import { newPlayerForm } from "./Providers/PlayerProvider.js";
 import { scoreProvider } from "./Providers/ScoreProvider.js";
 import { newTeamForm } from "./Providers/TeamProvider.js";
-import { teamOptionList } from "./Lists/TeamList.js";
+import { selectGameplayTeams } from "./Lists/TeamList.js";
 // import {  } from "module";
 
 const mainContainer = document.querySelector("#container")
@@ -61,7 +61,7 @@ mainContainer.addEventListener("click",
         </article>
         
         <section class="game__play">
-        ${teamOptionList()}
+        ${selectGameplayTeams()}
         </section>
 
         <section class="new__leaderboard">
