@@ -79,7 +79,6 @@ export const setTeam2id = (id) => {
 export const setTeam3id = (id) => {
     applicationState.team3CurrentScore.teamId = id
     applicationState.team3CurrentScore.score = 0
-    console.log(applicationState.team3CurrentScore.teamId)
 }
 
 export const setTeam1score = (score) => {
