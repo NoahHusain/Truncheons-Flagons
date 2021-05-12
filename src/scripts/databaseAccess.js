@@ -1,4 +1,4 @@
-const applicationState = {
+let applicationState = {
     teams: [],
     players: [],
     scores: [],

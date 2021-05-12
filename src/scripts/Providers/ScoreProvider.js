@@ -94,6 +94,17 @@ mainContainer.addEventListener(
             const gameOverEvent = new CustomEvent("gameOver")
             // post the final scores of the game
             // clear the data of the temp states
+            const applicationState = {
+                teams: [],
+                players: [],
+                scores: [],
+                currentScores: [],
+                team1CurrentScore: {},
+                team2CurrentScore: {},
+                team3CurrentScore: {},
+                CurrentRound: 1 
+            }
+            setApplicationState(applicationState)
             mainContainer.dispatchEvent(gameOverEvent)
         }
     }
