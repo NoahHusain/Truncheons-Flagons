@@ -24,17 +24,17 @@ export const selectGameplayTeams = () => {
     <h2>Select your teams!</h2>
     <div class="gameplay__team___dropdowns">
     <div class="gameplay__team__dropdown">
-    <select name="teamSelection1" class="dropdownList teamSelect">
+    <select name="teamSelection1" class="dropdownList teamSelect" id="teamSelection1">
             ${teamOptionList()}
         </select>
     </div>
     <div class="gameplay__team__dropdown">
-    <select name="teamSelection2" class="dropdownList teamSelect">
+    <select name="teamSelection2" class="dropdownList teamSelect" id="teamSelction2">
             ${teamOptionList()}
         </select>
         </div>
         <div class="gameplay__team__dropdown">
-    <select name="teamSelection3" class="dropdownList teamSelect">
+    <select name="teamSelection3" class="dropdownList teamSelect" id="teamSelection3">
             ${teamOptionList()}
         </select>
         </div>
@@ -46,6 +46,8 @@ const mainContainer = document.querySelector("#container")
 mainContainer.addEventListener("change", changeEvent => {
     if (changeEvent.target.name === "teamSelection1") {
         setTeam1id(parseInt(changeEvent.target.value))
+        const teamSelection1 = document.querySelector("#teamSelection1")
+        teamSelection1.style.display = "none";
     }
 })
 
