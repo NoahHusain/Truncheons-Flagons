@@ -1,4 +1,4 @@
-import { getTeams, getScores } from "../databaseAccess.js"
+import { getTeams, getScores, getPlayers } from "../databaseAccess.js"
 
 // render function for new team form
 export const newTeamForm = () => {
@@ -29,7 +29,8 @@ mainContainer.addEventListener("click", clickEvent => {
         const DataForAPI = {
             dateCreated: creationDate,
             name: inputTeamName,
-            id: newTeamId
+            id: newTeamId,
+            playerCount: 0
         }
         // call Post API function on sendDataToAPI
         sendTeamToAPI(DataForAPI)
@@ -45,6 +46,20 @@ mainContainer.addEventListener("click", clickEvent => {
         }
 
         sendScoreToAPI(scoreCard)
+
+        // // create new player to associate with team, 0 at this time
+        // const playerArray = getPlayers()
+        // const newPlayerId = playerArray.length + 1
+        // const newPlayer = {
+        //     id: newPlayerId,
+        //     firstName: "",
+        //     lastName: "",
+        //     country: "",
+        //     teamId: newTeamId,
+            
+        // }
+
+        // sendPlayerToAPI(newPlayer)
     }
 })
 
@@ -79,3 +94,19 @@ const sendScoreToAPI = (scoreObject) => {
             mainContainer.dispatchEvent(new CustomEvent("stateChanged"))
         })
 }
+
+// const sendPlayerToAPI = (playerObject) => {
+//     const fetchOptions = {
+//         method: "POST",
+//         headers: {
+//             "Content-Type": "application/json"
+//         },
+//         body: JSON.stringify(playerObject)
+//     }
+
+//     return fetch("http://localhost:8088/players", fetchOptions)
+//         .then(response => response.json())
+//         .then(() => {
+//             mainContainer.dispatchEvent(new CustomEvent("stateChanged"))
+//         })
+// }
