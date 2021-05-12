@@ -1,3 +1,4 @@
+import { Leaderboard } from "./Lists/ScoreList.js";
 import { newPlayerForm } from "./Providers/PlayerProvider.js";
 import { scoreProvider } from "./Providers/ScoreProvider.js";
 import { newTeamForm } from "./Providers/TeamProvider.js";
@@ -34,6 +35,7 @@ export const TruncheonsFlagons = () => {
 
         <section class="new__leaderboard data">
             <h2>Leaderboard</h2>
+            ${Leaderboard()}
         </section>
     </div>
     `
