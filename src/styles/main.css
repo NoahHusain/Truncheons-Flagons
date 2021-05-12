@@ -1,20 +1,44 @@
 body {
-    font-family: 'Montserrat', sans-serif;;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('../images/scroll1.jpg');
+    background-size: cover;
+    background-color: blanchedalmond;
 }
 
 h1, h2 {
     font-family: 'MedievalSharp', cursive;
     text-align: center;
+    padding-top: 1rem;
 }
 
 .truncheons__container {
     display: flex;
     justify-content: space-between;
+    margin: 1rem;
 }
 
 .choices {
     flex: 1;
 }
+
+.new__player {
+    background-color: rgb(240, 211, 169);
+    padding: 1rem 1rem;
+}
+
+.field {
+    margin: .5rem;
+}
+
+#teamSelection {
+    justify-content: left;
+}
+
+
+
+
 
 .new__leaderboard {
     flex: 1;
@@ -26,7 +50,8 @@ h1, h2 {
 
 .button {
     display: block;
-    margin: 5rem auto;
+    margin-bottom: .5rem;
+    margin-left: 2rem;
 }
 
 .gameplay__team__dropdowns {
