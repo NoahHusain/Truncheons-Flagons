@@ -28,16 +28,16 @@ export const TruncheonsFlagons = () => {
         <button class="button" id="start__button">Start Game</button>
         </section>
 
+        <section class="new__leaderboard data">
+        <h2>Leaderboard</h2>
+        ${Leaderboard()}
+        </section>
+        </div>
+        
         <section class="new__score data">
             <h2>Team Score</h2>
             ${scoreProvider()}
         </section>
-
-        <section class="new__leaderboard data">
-            <h2>Leaderboard</h2>
-            ${Leaderboard()}
-        </section>
-    </div>
     `
 }
 
