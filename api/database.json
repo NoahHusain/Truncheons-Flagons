@@ -1,5 +1,5 @@
-{
-  "teams": [
+  {
+    "teams": [
     {
       "id": 1,
       "name": "Windhelm",
@@ -14,11 +14,6 @@
       "id": 3,
       "name": "Helgen",
       "dateCreated": "01/05/2021"
-    },
-    {
-      "dateCreated": 1620777775650,
-      "name": "Void Vision",
-      "id": 4
     }
   ],
   "players": [
@@ -143,3 +138,4 @@
     }
   ]
 }
+
