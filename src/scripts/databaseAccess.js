@@ -1,8 +1,10 @@
 const applicationState =  {
     teams: [],
     players: [],
-    scores: []
+    scores: [],
+    currentScores: []
 }
+
 
 
 // API fetch functions
@@ -43,4 +45,10 @@ export const getPlayers = () => {
 }
 export const getScores = () => {
     return [...applicationState.scores]
+}
+
+export const setScores = (score1, score2, score3) => {
+    applicationState.currentScores.push(score1)
+    applicationState.currentScores.push(score2)
+    applicationState.currentScores.push(score3)
 }
