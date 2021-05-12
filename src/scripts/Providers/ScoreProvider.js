@@ -16,7 +16,7 @@ export const findTeamName = () => {
 export const scoreProvider = () => {
     let html = `
     <div class="field">
-        <label class="label" for="teamScore">${findTeamName()} Score:</label>
+        <label class="label" for="teamScore">Team 1 Score:</label>
         <input type="text" name="teamScore" id="team1Score"/>
     </div>
 
