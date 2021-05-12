@@ -25,19 +25,16 @@ export const selectGameplayTeams = () => {
     <div class="gameplay__team___dropdowns">
     <div class="gameplay__team__dropdown">
     <select name="teamSelection1" class="dropdownList">
-            <option class="teamSelectOption" value="">--choose one!--</option>
             ${teamOptionList()}
         </select>
     </div>
     <div class="gameplay__team__dropdown">
     <select name="teamSelection2" class="dropdownList">
-            <option class="teamSelectOption" value="">--choose one!--</option>
             ${teamOptionList()}
         </select>
         </div>
         <div class="gameplay__team__dropdown">
     <select name="teamSelection3" class="dropdownList">
-            <option class="teamSelectOption" value="">--choose one!--</option>
             ${teamOptionList()}
         </select>
         </div>
