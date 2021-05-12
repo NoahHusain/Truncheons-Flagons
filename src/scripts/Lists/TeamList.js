@@ -9,8 +9,10 @@ import { getTeams } from "../databaseAccess.js"
 export const teamOptionList = () => {
     const teamsArray = getTeams()
     return `
-        <option id="teamDropdown">--choose one!--</option>
+        <select id="teamSelection" class="dropdownList">
+        <option>--choose one!--</option>
         ${ teamsArray.map(teamListItem).join("\n") }
+        </select>
     `
 }
 

@@ -20,9 +20,7 @@ export const newPlayerForm = () => {
 
     <div class="field">
         <label class="label" for="teamSelection">Select a team:</label>
-        <select name="teamSelection" class="dropdownList">
             ${teamOptionList()}
-        </select>
     </div>
  
  
@@ -45,7 +43,7 @@ mainContainer.addEventListener("click", clickEvent => {
         // function to access id of option element below
         // Do I need an event listener here?
 
-        const inputTeamId = document.querySelector("#teamDropdown").selectedIndex
+        const inputTeamId = parseInt(document.querySelector("#teamSelection").value)
         
         
         
@@ -60,6 +58,7 @@ mainContainer.addEventListener("click", clickEvent => {
         sendPlayerToAPI(DataForAPI)
     }
 })
+
 
 const sendPlayerToAPI = (playerObject) => {
     const fetchOptions = {
