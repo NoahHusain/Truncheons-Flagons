@@ -49,6 +49,7 @@ const countTeamScores =  () => {
     scores.forEach((score) => {
         // Find index of team.id equal to score.teamId
         const teamIndex = teams.findIndex(team => team.id === score.teamId)
+        
 
         // If current team or NEW team
         // Adding score key/value pair to teams object
@@ -58,6 +59,8 @@ const countTeamScores =  () => {
             teams[teamIndex].score + score.score; // otherwise add the score
     })
 }
+
+
 
 
 
