@@ -135,6 +135,42 @@
       "teamId": 3,
       "score": 1,
       "timestamp": 1620238792447
+    },
+    {
+      "teamId": 2,
+      "score": 3,
+      "timestamp": 1620856329197,
+      "id": 10
+    },
+    {
+      "teamId": 1,
+      "score": 3,
+      "timestamp": 1620856329197,
+      "id": 11
+    },
+    {
+      "teamId": 3,
+      "score": 3,
+      "timestamp": 1620856329197,
+      "id": 12
+    },
+    {
+      "teamId": 1,
+      "score": 3,
+      "timestamp": 1620856422291,
+      "id": 13
+    },
+    {
+      "teamId": 2,
+      "score": 3,
+      "timestamp": 1620856422291,
+      "id": 14
+    },
+    {
+      "teamId": 3,
+      "score": 3,
+      "timestamp": 1620856422291,
+      "id": 15
     }
   ]
 }
