@@ -5,7 +5,8 @@ const applicationState = {
     currentScores: [],
     team1CurrentScore: {},
     team2CurrentScore: {},
-    team3CurrentScore: {}
+    team3CurrentScore: {},
+    CurrentRound: 0 
 }
 
 
@@ -48,6 +49,13 @@ export const getPlayers = () => {
 }
 export const getScores = () => {
     return [...applicationState.scores]
+}
+export const getCurrentRound = () => {
+    return applicationState.CurrentRound
+}
+
+export const setCurrentRound = (round) => {
+    applicationState.CurrentRound = round
 }
 
 export const setScores = (score1, score2, score3) => {

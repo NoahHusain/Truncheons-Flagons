@@ -1,11 +1,15 @@
 // get current list of teams from app state in database
-import { getTeams, postScores, setScores, getTeam1CurrentScore, getTeam2CurrentScore, getTeam3CurrentScore } from "../databaseAccess.js"
+import { getTeams, getTeam1CurrentScore, getTeam2CurrentScore, getTeam3CurrentScore, setTeam1score, setTeam2score, setTeam3score, getCurrentRound, setCurrentRound } from "../databaseAccess.js"
+import { newPlayerForm } from "./PlayerProvider.js";
+import { newTeamForm } from "./TeamProvider.js";
+import { currentGame } from "../Stats/Score.js";
+
 
 const mainContainer = document.querySelector("#container")
 
 
 
-// could you grab team names like this? ${getTeams.teams[0]}
+// Display the score entry fields with corresponding team names
 export const scoreProvider = () => {
     const teams = getTeams()
     const team1current = getTeam1CurrentScore()
@@ -32,7 +36,6 @@ export const scoreProvider = () => {
     </div>
  
     <button class="button" id="submitScores">Submit Score</button> 
-    <button class="button" id="submitScoresCloud">Submit Scores to Cloud</button> 
 
     
     `
@@ -45,6 +48,7 @@ mainContainer.addEventListener(
     "click",
     (clickEvent) => {
         if (clickEvent.target.id === 'submitScores'){
+            gameRoundIncrement()
             const team1score = document.querySelector("input[name='team1Score']").value
             const team2score = document.querySelector("input[name='team2Score']").value
             const team3score = document.querySelector("input[name='team3Score']").value
@@ -67,6 +71,7 @@ mainContainer.addEventListener(
         
         <section class="game__play">
         ${scoreProvider()}
+        ${printCurrentRound()}
         ${currentGame()}
         </section>
 
@@ -78,13 +83,21 @@ mainContainer.addEventListener(
     }
 )
 
-mainContainer.addEventListener(
-    "click",
-    (event) => {
-        if (event.target.id === 'submitScoresCloud'){
-            postScores(setScores(scores.team1Score, scores.team2Score, scores.team3Score))
 
-        }
-    }
-)
+// increment state variable by 1 
+export const gameRoundIncrement = () => {
+    let currentRound = getCurrentRound()
+    let roundIncrement = currentRound += 1
+    setCurrentRound(roundIncrement)
+
+}
+
+// HTML representation of current round bean counter
+export const printCurrentRound = () => {
+    const currentRound = getCurrentRound()
+    let html = `<div class="field">Round ${currentRound}</div>`
+    return html
+}
+
+// custom event that dispatches once the game has finished round 3 that renders new page with finished game.
 
