@@ -1,8 +1,30 @@
 // get current list of teams from app state in database
-import { getTeams, postScores, setScores } from "../databaseAccess.js"
+import { getTeam1CurrentScore, getTeam2CurrentScore, getTeams, postScores, setScores } from "../databaseAccess.js"
 
 const teams = getTeams()
 const mainContainer = document.querySelector("#container")
+
+export const findTeams = () => {
+    const getTeam1ID = getTeam1CurrentScore()
+    const getTeam2ID = getTeam2CurrentScore()
+    const getTeam3ID = getTeam3CurrentScore()
+
+    const foundTeam1 = getTeam1ID.find(
+        (team) => {
+            return team.id === getTeam1CurrentScore.teamId
+        }
+    )
+    const foundTeam2 = getTeam2ID.find(
+        (team) => {
+            return team.id === getTeam2CurrentScore.teamId
+        }
+    )
+    const foundTeam3 = getTeam3ID.find(
+        (team) => {
+            return team.id === getTeam3CurrentScore.teamId
+        }
+    )
+}
 
 // could you grab team names like this? ${getTeams.teams[0]}
 export const scoreProvider = () => {
