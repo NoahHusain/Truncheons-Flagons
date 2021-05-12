@@ -1,32 +1,28 @@
 // get current list of teams from app state in database
-import { getTeam1CurrentScore, getTeam2CurrentScore, getTeams, postScores, setScores } from "../databaseAccess.js"
+import { getTeams, postScores, setScores } from "../databaseAccess.js"
 
 const teams = getTeams()
-const getTeam1ID = getTeam1CurrentScore()
 const mainContainer = document.querySelector("#container")
 
-export const findTeamName = () => {
-    for (const team of teams) {
-        if(team.id === '1')
-        return 'Windhelm'
-    }
-}
+const foundTeam1 = teams.find(team => team.id === team1current.teamId)
+const foundTeam2 = teams.find(team => team.id === team2current.teamId)
+const foundTeam3 = teams.find(team => team.id === team3current.teamId)
 
 // could you grab team names like this? ${getTeams.teams[0]}
 export const scoreProvider = () => {
     let html = `
     <div class="field">
-        <label class="label" for="teamScore">Team 1 Score:</label>
+        <label class="label" for="teamScore">${foundTeam1.name} Score:</label>
         <input type="text" name="teamScore" id="team1Score"/>
     </div>
 
     <div class="field">
-        <label class="label" for="teamScore">Team 2 Score:</label>
+        <label class="label" for="teamScore">${foundTeam2.name} Score:</label>
         <input type="text" name="teamScore" id="team2Score"/>
     </div>
 
     <div class="field">
-        <label class="label" for="teamScore">Team 3 Score:</label>
+        <label class="label" for="teamScore">${foundTeam3.name} Score:</label>
         <input type="text" name="teamScore" id="team3Score"/>
     </div>
  
