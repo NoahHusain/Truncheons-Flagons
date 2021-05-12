@@ -17,6 +17,11 @@ export const Leaderboard = () => {
     countTeamScores()
     countTeamPlayers()
 
+    // Sorting teams by highest score
+    teams.sort(function (teamA, teamB) {
+        return teamB.score - teamA.score
+    })
+
     let html = `<div class="team__columnHeader">
             <table class="table">
                 <tr>
@@ -42,21 +47,7 @@ export const Leaderboard = () => {
 }
 
 
-        // <div class="team__name">
-        //     <ul>
-        //         <li></li>
-        //     </ul>
-        // </div>
-        // <div class="team__playerCount">
-        //     <ul>
-        //         <li></li>
-        //     </ul>
-        // </div>
-        // <div class="team__score">
-        //     <ul>
-        //         <li></li>
-        //     </ul>
-        // </div>
+
 
 
 
@@ -76,9 +67,6 @@ const countTeamScores =  () => {
             teams[teamIndex].score + score.score; // otherwise add the score
     })
 }
-
-
-
 
 
 
