@@ -14,18 +14,6 @@
       "id": 3,
       "name": "Helgen",
       "dateCreated": "01/05/2021"
-    },
-    {
-      "dateCreated": "5/13/2021, 10:26:49 AM",
-      "name": "Helgen",
-      "id": 4,
-      "playerCount": 0
-    },
-    {
-      "dateCreated": "5/13/2021, 10:27:50 AM",
-      "name": "Helgen",
-      "id": 5,
-      "playerCount": 0
     }
   ],
   "players": [
@@ -91,13 +79,6 @@
       "lastName": "Hardy",
       "country": "Spain",
       "teamId": 3
-    },
-    {
-      "firstName": "John",
-      "lastName": "Doe",
-      "country": "Canada",
-      "teamId": 3,
-      "id": 10
     }
   ],
   "scores": [
@@ -150,30 +131,10 @@
       "id": 8
     },
     {
-      "teamId": 2,
-      "score": 1,
-      "timestamp": 1620238792447
-    },
-    {
       "id": 9,
       "teamId": 3,
       "score": 1,
       "timestamp": 1620238792447
-    },
-    {
-      "id": 10,
-      "teamId": 4,
-      "score": 0,
-      "timestamp": 1620919614548
-    },
-    {
-      "id": 11,
-      "teamId": 5,
-      "score": 0,
-      "timestamp": 1620919676122
-      "score": 3,
-      "timestamp": 1620923289307,
-      "id": 9
     }
   ]
 }
