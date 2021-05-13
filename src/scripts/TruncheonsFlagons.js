@@ -28,7 +28,6 @@ export const TruncheonsFlagons = () => {
         </section>
 
         <section class="new__leaderboard data">
-        <h2>Leaderboard</h2>
         ${Leaderboard()}
         </section>
         </div>

@@ -88,7 +88,7 @@ export const gameRoundIncrement = () => {
 // HTML representation of current round bean counter
 export const printCurrentRound = () => {
     const currentRound = getCurrentRound()
-    let html = `<div class="field">Round ${currentRound}</div>`
+    let html = `<div class="round__field">Round ${currentRound}</div>`
     return html
 }
 

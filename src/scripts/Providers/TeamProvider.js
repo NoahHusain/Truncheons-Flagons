@@ -3,7 +3,7 @@ import { getTeams, getScores, getPlayers } from "../databaseAccess.js"
 // render function for new team form
 export const newTeamForm = () => {
     let html = `
-    <div class="field">
+    <div class="team__field">
         <label class="label" for="teamName">Team Name</label>
         <input type="text" name="teamName" class="input"/>
     </div>
@@ -56,20 +56,6 @@ mainContainer.addEventListener("click", clickEvent => {
         }
 
         sendScoreToAPI(scoreCard)
-
-        // // create new player to associate with team, 0 at this time
-        // const playerArray = getPlayers()
-        // const newPlayerId = playerArray.length + 1
-        // const newPlayer = {
-        //     id: newPlayerId,
-        //     firstName: "",
-        //     lastName: "",
-        //     country: "",
-        //     teamId: newTeamId,
-            
-        // }
-
-        // sendPlayerToAPI(newPlayer)
     }
 })
 
@@ -104,19 +90,3 @@ const sendScoreToAPI = (scoreObject) => {
             mainContainer.dispatchEvent(new CustomEvent("stateChanged"))
         })
 }
-
-// const sendPlayerToAPI = (playerObject) => {
-//     const fetchOptions = {
-//         method: "POST",
-//         headers: {
-//             "Content-Type": "application/json"
-//         },
-//         body: JSON.stringify(playerObject)
-//     }
-
-//     return fetch("http://localhost:8088/players", fetchOptions)
-//         .then(response => response.json())
-//         .then(() => {
-//             mainContainer.dispatchEvent(new CustomEvent("stateChanged"))
-//         })
-// }

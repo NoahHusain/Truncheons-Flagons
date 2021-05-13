@@ -9,6 +9,11 @@
     border-radius: 1rem;
 }
 
+.team__field {
+    margin-top: .5rem;
+    text-align: center;
+}
+
 #submitTeam {
     display: block;
     text-align: center;

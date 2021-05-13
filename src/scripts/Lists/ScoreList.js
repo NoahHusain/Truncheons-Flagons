@@ -22,13 +22,14 @@ export const Leaderboard = () => {
         return teamB.score - teamA.score
     })
 
-    let html = `<div class="team__columnHeader">
+    let html = `<div class="leaderboard__table">
+            <h2 class="table__mainHeader">Leaderboard</h2>
             <table class="table">
-                <tr>
-                    <th class="table__header"><u>Team</u></th>
-                    <th class="table__header"><u>Players</u></th>
-                    <th class="table__header"><u>Score</u></th>
-                </tr>
+            <tr>
+                <th class="table__header"><u>Team</u></th>
+                <th class="table__header"><u>Players</u></th>
+                <th class="table__header"><u>Score</u></th>
+            </tr>
         `
 
     html += teams.map((teamObject) => {

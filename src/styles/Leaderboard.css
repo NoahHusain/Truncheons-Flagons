@@ -1,18 +1,30 @@
-.table {
-    background-color:rgba(240, 211, 169, 0.4);
+.leaderboard__table {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(240, 211, 169, 0.4);
     border: 1px solid black;
-    box-shadow: 0px 0px 10px rgb(107, 81, 10);
+    box-shadow: 0px 0px 10px rgb(107 81 10);
     border-radius: 1rem;
+    margin: 1rem 0rem;
+}
+
+.table__mainHeader{
+    padding: .5rem 0;
 }
 
 .table__header {
     font-family: 'MedievalSharp', cursive;
     font-weight: bolder;
+    text-align: center;
 }
 
 th, td {
     padding: 0.5rem;
   }
+
+.table__name {
+    text-align: center;
+}
 
 .table__value {
     text-align: center;
