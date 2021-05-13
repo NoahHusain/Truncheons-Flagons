@@ -98,15 +98,54 @@ mainContainer.addEventListener(
     (clickEvent) => {
         const currentRound = getCurrentRound()
         if (clickEvent.target.id === 'submitScores' && currentRound > 3) {
-            // const team1CurrentScore = getTeam1CurrentScore()
-            // team1CurrentScore.timestamp = Date.now()
-            // sendCurrentScores(team1CurrentScore)
-            const modal = document.querySelector("myModal");
-            const btn = docume
-            const span = document.getElementsByClassName("close")[0];
+            const team1CurrentScore = getTeam1CurrentScore()
+            team1CurrentScore.timestamp = Date.now()
+            sendCurrentScores(team1CurrentScore)
+            const teams = getTeams()
+            const foundTeam1 = teams.find(team => team.id === team1CurrentScore.teamId)
+            const team2CurrentScore = getTeam2CurrentScore()
+            const foundTeam2 = teams.find(team => team.id === team2CurrentScore.teamId)
+            const team3CurrentScore = getTeam3CurrentScore()
+            const foundTeam3 = teams.find(team => team.id === team3CurrentScore.teamId)
+            let messageText
+            if ((team1CurrentScore.score === team2CurrentScore.score) &&
+                (team1CurrentScore.score === team3CurrentScore.score)) {
+                messageText = "It's a tie between all three teams!"
+            } else if (
+                (team1CurrentScore.score === team2CurrentScore.score) &&
+                (team1CurrentScore.score > team3CurrentScore.score)) {
+                    messageText = `It's a tie between ${foundTeam1.name} and ${foundTeam2.name}!`
+            } else if (
+                (team1CurrentScore.score === team3CurrentScore.score) &&
+                (team1CurrentScore.score > team2CurrentScore.score)) {
+                    messageText = `It's a tie between ${foundTeam1.name} and ${foundTeam3.name}!`
+            } else if (
+                (team2CurrentScore.score === team3CurrentScore.score) &&
+                (team2CurrentScore.score > team1CurrentScore.score)) {
+                    messageText = `It's a tie between ${foundTeam2.name} and ${foundTeam3.name}!`
+            } else if (
+                (team1CurrentScore.score > team2CurrentScore.score) &&
+                (team1CurrentScore.score > team3CurrentScore.score)) {
+                    messageText = `${foundTeam1.name} is the winner!`
+            } else if (
+                (team2CurrentScore.score > team1CurrentScore.score) &&
+                (team2CurrentScore.score > team3CurrentScore.score)) {
+                    messageText = `${foundTeam2.name} is the winner!`
+            } else {
+                    messageText = `${foundTeam3.name} is the winner!`
+            }
+            const modal = document.querySelector("#myModal");
+            const span = document.querySelector(".close-modal");
+            const message = document.querySelector("#modal-message")
+            message.innerHTML = messageText
             modal.style.display = "block";
-            span.onclick = function() {
+            span.onclick = () => {
                 modal.style.display = "none";
+              }
+              window.onclick = (event) => {
+                if (event.target == modal) {
+                  modal.style.display = "none";
+                }
               }
         }
     }
