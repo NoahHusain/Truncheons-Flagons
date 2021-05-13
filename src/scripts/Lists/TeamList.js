@@ -1,4 +1,4 @@
-import { getTeam1CurrentScore, getTeam2CurrentScore, getTeam3CurrentScore, getTeams, setTeam1id, setTeam2id, setTeam3id } from "../databaseAccess.js"
+import { getPlayers, getTeam1CurrentScore, getTeam2CurrentScore, getTeam3CurrentScore, getTeams, setTeam1id, setTeam2id, setTeam3id } from "../databaseAccess.js"
 import { printCurrentRound, scoreProvider } from "../Providers/ScoreProvider.js"
 import { currentGame } from "../Stats/Score.js";
 
@@ -13,7 +13,44 @@ export const teamOptionList = () => {
 }
 
 const teamListItem = (team) => {
+    
+    const playersArray = getPlayers()
+    let teamPlayerCounter = 0
+
+    for (let i = 0; i < playersArray.length; i++) {
+        if (playersArray[i].teamId === team.id) {
+            teamPlayerCounter += 1
+        }
+    }
+    
+    if (teamPlayerCounter >= 3) {
     return `<option value="${team.id}">${team.name}</option>`
+    }
+}
+
+// list to add new player to unpopulated team
+export const addToTeamDropdown = () => {
+    const teamsArray = getTeams()
+    return `
+        <option>--choose one!--</option>
+        ${teamsArray.map(newTeamListItem).join("\n")}
+        </select>
+    `
+}
+
+const newTeamListItem = (team) => {
+    const playersArray = getPlayers()
+    let teamPlayerCounter = 0
+
+    for (let i = 0; i < playersArray.length; i++) {
+        if (playersArray[i].teamId === team.id) {
+            teamPlayerCounter += 1
+        }
+    }
+    
+    if (teamPlayerCounter < 3) {
+    return `<option value="${team.id}">${team.name}</option>`
+    }
 }
 
 
