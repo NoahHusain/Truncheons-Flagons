@@ -1,5 +1,5 @@
 import { getTeam1CurrentScore, getTeam2CurrentScore, getTeam3CurrentScore, getTeams, setTeam1id, setTeam2id, setTeam3id } from "../databaseAccess.js"
-import { scoreProvider } from "../Providers/ScoreProvider.js"
+import { printCurrentRound, scoreProvider } from "../Providers/ScoreProvider.js"
 import { currentGame } from "../Stats/Score.js";
 
 // function to create team list items for team dropdown menu
@@ -53,6 +53,7 @@ mainContainer.addEventListener("change", changeEvent => {
             const gamePlay = document.querySelector(".game__play")
                 gamePlay.innerHTML = `
                 ${scoreProvider()}
+                ${printCurrentRound()}
                 ${currentGame()}`
         }
     }
@@ -70,6 +71,7 @@ mainContainer.addEventListener("change", changeEvent => {
             const gamePlay = document.querySelector(".game__play")
                 gamePlay.innerHTML = `
                 ${scoreProvider()}
+                ${printCurrentRound()}
                 ${currentGame()}`
         }
     }
@@ -87,6 +89,7 @@ mainContainer.addEventListener("change", changeEvent => {
             const gamePlay = document.querySelector(".game__play")
                 gamePlay.innerHTML = `
                 ${scoreProvider()}
+                ${printCurrentRound()}
                 ${currentGame()}`
         }
     }

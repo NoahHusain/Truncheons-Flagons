@@ -1,28 +1,35 @@
 // get current list of teams from app state in database
-import { setTeam1score, setTeam2score, setTeam3score } from "../databaseAccess.js"
+import { getTeams, getTeam1CurrentScore, getTeam2CurrentScore, getTeam3CurrentScore, setTeam1score, setTeam2score, setTeam3score, getCurrentRound, setCurrentRound, sendCurrentScore, } from "../databaseAccess.js"
 import { currentGame } from "../Stats/Score.js";
 
 const mainContainer = document.querySelector("#container")
 
-// could you grab team names like this? ${getTeams.teams[0]}
+// Display the score entry fields with corresponding team names
 export const scoreProvider = () => {
+    const teams = getTeams()
+    const team1current = getTeam1CurrentScore()
+    const foundTeam1 = teams.find(team => team.id === team1current.teamId)
+    const team2current = getTeam2CurrentScore()
+    const foundTeam2 = teams.find(team => team.id === team2current.teamId)
+    const team3current = getTeam3CurrentScore()
+    const foundTeam3 = teams.find(team => team.id === team3current.teamId)
+
     let html = `
     <div class="field">
-        <label class="label" for="teamScore">Team 1 Score:</label>
-        <input type="text" name="team1Score" class="teamScore"/>
+        <label class="label" for="teamScore">${foundTeam1.name} Score:</label>
+        <input type="text" name="team1Score" id="team1Score"/>
     </div>
-
     <div class="field">
-        <label class="label" for="teamScore">Team 2 Score:</label>
-        <input type="text" name="team2Score" class="teamScore"/>
+        <label class="label" for="teamScore">${foundTeam2.name} Score:</label>
+        <input type="text" name="team2Score" id="team2Score"/>
     </div>
-
     <div class="field">
-        <label class="label" for="teamScore">Team 3 Score:</label>
-        <input type="text" name="team3Score" class="teamScore"/>
+        <label class="label" for="teamScore">${foundTeam3.name} Score:</label>
+        <input type="text" name="team3Score" id="team3Score"/>
     </div>
  
     <button class="button" id="submitScores">Submit Score</button> 
+    
     `
     return html
 }
@@ -33,6 +40,7 @@ mainContainer.addEventListener(
     "click",
     (clickEvent) => {
         if (clickEvent.target.id === 'submitScores') {
+            gameRoundIncrement()
             const team1score = document.querySelector("input[name='team1Score']").value
             const team2score = document.querySelector("input[name='team2Score']").value
             const team3score = document.querySelector("input[name='team3Score']").value
@@ -42,7 +50,45 @@ mainContainer.addEventListener(
             const gamePlay = document.querySelector(".game__play")
             gamePlay.innerHTML = `
         ${scoreProvider()}
-        ${currentGame()}`
+        ${printCurrentRound()}
+        ${currentGame()}
+        }
+    }
+)
+
+
+// increment state variable by 1 
+export const gameRoundIncrement = () => {
+    let currentRound = getCurrentRound()
+    let roundIncrement = currentRound += 1
+    setCurrentRound(roundIncrement)
+
+}
+
+// HTML representation of current round bean counter
+export const printCurrentRound = () => {
+    const currentRound = getCurrentRound()
+    let html = `<div class="field">Round ${currentRound}</div>`
+    return html
+}
+
+// custom event that dispatches once the game has finished round 3.
+mainContainer.addEventListener(
+    "click",
+    (clickEvent) => {
+        const currentRound = getCurrentRound()
+        if (clickEvent.target.id === 'submitScores' && currentRound > 3) {
+            const team1CurrentScore = getTeam1CurrentScore()
+            team1CurrentScore.timestamp = Date.now()
+            const team2CurrentScore = getTeam2CurrentScore()
+            team2CurrentScore.timestamp = Date.now()
+            const team3CurrentScore = getTeam3CurrentScore()
+            team3CurrentScore.timestamp = Date.now()
+            sendCurrentScore(team1CurrentScore).then(
+            sendCurrentScore(team2CurrentScore)).then(
+            sendCurrentScore(team3CurrentScore)).then(
+            mainContainer.dispatchEvent(new CustomEvent('resetTempState'))).then(
+            mainContainer.dispatchEvent(new CustomEvent('stateChanged')))
         }
     }
 )
