@@ -20,6 +20,12 @@
       "name": "Killer Wenches",
       "id": 4,
       "playerCount": 0
+    },
+    {
+      "dateCreated": "5/13/2021, 10:26:56 AM",
+      "name": "Unicorns of Love and Hope",
+      "id": 5,
+      "playerCount": 0
     }
   ],
   "players": [
@@ -99,6 +105,13 @@
       "country": "USA",
       "teamId": 4,
       "id": 11
+    },
+    {
+      "firstName": "Noah",
+      "lastName": "Husain",
+      "country": "USA",
+      "teamId": 5,
+      "id": 12
     }
   ],
   "scores": [
@@ -307,58 +320,46 @@
       "id": 34
     },
     {
-      "teamId": 2,
-      "score": 19,
-      "timestamp": 1620923064081,
+      "teamId": 1,
+      "score": 4,
+      "timestamp": 1620919587053,
       "id": 35
     },
     {
-      "teamId": 4,
-      "score": 12,
-      "timestamp": 1620923064081,
+      "teamId": 2,
+      "score": 4,
+      "timestamp": 1620919587053,
       "id": 36
     },
     {
-      "teamId": 1,
+      "teamId": 3,
       "score": 4,
-      "timestamp": 1620923064081,
+      "timestamp": 1620919587053,
       "id": 37
     },
     {
-      "teamId": 2,
-      "score": 2,
-      "timestamp": 1620923147912,
-      "id": 38
+      "id": 38,
+      "teamId": 5,
+      "score": 0,
+      "timestamp": 1620919616850
     },
     {
-      "teamId": 3,
-      "score": 1,
-      "timestamp": 1620923147912,
+      "teamId": 1,
+      "score": 0,
+      "timestamp": 1620921572126,
       "id": 39
     },
     {
-      "teamId": 4,
-      "score": 2,
-      "timestamp": 1620923147912,
+      "teamId": 2,
+      "score": 0,
+      "timestamp": 1620921572126,
       "id": 40
     },
     {
-      "teamId": 2,
-      "score": 3,
-      "timestamp": 1620923201541,
-      "id": 41
-    },
-    {
-      "teamId": 4,
-      "score": 2,
-      "timestamp": 1620923201541,
-      "id": 42
-    },
-    {
       "teamId": 3,
-      "score": 52,
-      "timestamp": 1620923201541,
-      "id": 43
+      "score": 0,
+      "timestamp": 1620921572126,
+      "id": 41
     }
   ]
 }
