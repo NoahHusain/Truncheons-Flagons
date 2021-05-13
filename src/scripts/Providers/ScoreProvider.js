@@ -89,11 +89,11 @@ mainContainer.addEventListener(
             team2CurrentScore.timestamp = Date.now()
             const team3CurrentScore = getTeam3CurrentScore()
             team3CurrentScore.timestamp = Date.now()
-            sendCurrentScore(team1CurrentScore)
-            sendCurrentScore(team2CurrentScore)
-            sendCurrentScore(team3CurrentScore)
-            mainContainer.dispatchEvent(new CustomEvent('resetTempState'))
-            mainContainer.dispatchEvent(new CustomEvent('stateChanged'))
+            sendCurrentScore(team1CurrentScore).then(
+            sendCurrentScore(team2CurrentScore)).then(
+            sendCurrentScore(team3CurrentScore)).then(
+            mainContainer.dispatchEvent(new CustomEvent('resetTempState'))).then(
+            mainContainer.dispatchEvent(new CustomEvent('stateChanged')))
         }
     }
 )

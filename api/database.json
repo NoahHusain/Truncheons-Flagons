@@ -14,6 +14,12 @@
       "id": 3,
       "name": "Helgen",
       "dateCreated": "01/05/2021"
+    },
+    {
+      "dateCreated": "5/12/2021, 10:03:13 PM",
+      "name": "Killer Wenches",
+      "id": 4,
+      "playerCount": 0
     }
   ],
   "players": [
@@ -79,6 +85,20 @@
       "lastName": "Hardy",
       "country": "Spain",
       "teamId": 3
+    },
+    {
+      "firstName": "John",
+      "lastName": "Doe",
+      "country": "Canada",
+      "teamId": 3,
+      "id": 10
+    },
+    {
+      "firstName": "Caleb",
+      "lastName": "Inman",
+      "country": "USA",
+      "teamId": 4,
+      "id": 11
     }
   ],
   "scores": [
@@ -171,6 +191,120 @@
       "score": 3,
       "timestamp": 1620856422291,
       "id": 15
+    },
+    {
+      "teamId": 2,
+      "score": 4,
+      "timestamp": 1620858996579,
+      "id": 16
+    },
+    {
+      "teamId": 1,
+      "score": 4,
+      "timestamp": 1620858996579,
+      "id": 17
+    },
+    {
+      "teamId": 3,
+      "score": 4,
+      "timestamp": 1620858996579,
+      "id": 18
+    },
+    {
+      "id": 19,
+      "teamId": 4,
+      "score": 0,
+      "timestamp": 1620874993700
+    },
+    {
+      "teamId": 1,
+      "score": 3,
+      "timestamp": 1620875048520,
+      "id": 20
+    },
+    {
+      "teamId": 4,
+      "score": 3,
+      "timestamp": 1620875048520,
+      "id": 21
+    },
+    {
+      "teamId": 3,
+      "score": 3,
+      "timestamp": 1620875048520,
+      "id": 22
+    },
+    {
+      "teamId": 1,
+      "score": 3,
+      "timestamp": 1620875120228,
+      "id": 23
+    },
+    {
+      "teamId": 4,
+      "score": 3,
+      "timestamp": 1620875120228,
+      "id": 24
+    },
+    {
+      "teamId": 3,
+      "score": 4,
+      "timestamp": 1620875120228,
+      "id": 25
+    },
+    {
+      "teamId": 1,
+      "score": 3,
+      "timestamp": 1620917312101,
+      "id": 26
+    },
+    {
+      "teamId": 2,
+      "score": 3,
+      "timestamp": 1620917312101,
+      "id": 27
+    },
+    {
+      "teamId": 4,
+      "score": 3,
+      "timestamp": 1620917312101,
+      "id": 28
+    },
+    {
+      "teamId": 1,
+      "score": 3,
+      "timestamp": 1620918267112,
+      "id": 29
+    },
+    {
+      "teamId": 3,
+      "score": 3,
+      "timestamp": 1620918267112,
+      "id": 30
+    },
+    {
+      "teamId": 4,
+      "score": 3,
+      "timestamp": 1620918267112,
+      "id": 31
+    },
+    {
+      "teamId": 1,
+      "score": 3,
+      "timestamp": 1620918295939,
+      "id": 32
+    },
+    {
+      "teamId": 2,
+      "score": 3,
+      "timestamp": 1620918295939,
+      "id": 33
+    },
+    {
+      "teamId": 3,
+      "score": 3,
+      "timestamp": 1620918295939,
+      "id": 34
     }
   ]
 }
