@@ -1,0 +1,16 @@
+.rules__field {
+  margin: 1rem;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  padding: 0.5rem 0.5rem;
+  background-color: rgba(240, 211, 169, 0.4);
+  border: 1px solid black;
+  box-shadow: 0px 0px 10px rgb(107 81 10);
+  border-radius: 1rem;
+  justify-content: center;
+}
+
+ol {
+  margin-left: 0.5rem;
+}
