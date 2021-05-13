@@ -52,11 +52,6 @@ mainContainer.addEventListener(
         ${scoreProvider()}
         ${printCurrentRound()}
         ${currentGame()}
-        </section>
-        <section class="new__leaderboard">
-            <h2>Leaderboard</h2>
-        </section>
-    </div>`
         }
     }
 )
