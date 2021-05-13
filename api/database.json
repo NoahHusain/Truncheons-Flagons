@@ -87,16 +87,6 @@
       "lastName": "Hardy",
       "country": "Spain",
       "teamId": 3
-    },
-    {
-      "firstName": "Alexander",
-      "lastName": "Lambrow",
-      "country": "United States",
-      "firstName": "Noah",
-      "lastName": "Husain",
-      "country": "USA",
-      "teamId": 4,
-      "id": 10
     }
   ],
   "scores": [
@@ -207,16 +197,6 @@
       "score": 4,
       "timestamp": 1620932916820,
       "id": 18
-    },
-    {
-      "teamId": 2,
-      "score": 0,
-      "timestamp": 1620932916827,
-      "id": 19
-      "id": 10,
-      "teamId": 4,
-      "score": 0,
-      "timestamp": 1620929695956
     }
   ]
 }
