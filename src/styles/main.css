@@ -42,9 +42,11 @@ h3 {
 }
 
 .truncheons__container {
-  display: flex;
-  justify-content: space-between;
-  margin: 1rem;
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    justify-content: space-between;
+    margin: 1rem;
 }
 
 .choices {

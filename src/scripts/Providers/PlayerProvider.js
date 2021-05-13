@@ -1,4 +1,5 @@
-import { teamOptionList } from "../Lists/TeamList.js"
+import { addToTeamDropdown } from "../Lists/TeamList.js"
+import { getPlayers } from "../databaseAccess.js"
  
 // render function for new player form
 export const newPlayerForm = () => {
@@ -21,7 +22,7 @@ export const newPlayerForm = () => {
     <div class="field">
         <label class="label" for="teamSelection">Select a team:</label>
         <select id="teamSelection" class="dropdownList">
-            ${teamOptionList()}
+            ${ addToTeamDropdown() }
             </select>
     </div>
  
@@ -43,11 +44,26 @@ mainContainer.addEventListener("click", clickEvent => {
         const inputCountry = document.querySelector("input[name='countryOfOrigin']").value
         
         // function to access id of option element below
-        // Do I need an event listener here?
+
 
         const inputTeamId = parseInt(document.querySelector("#teamSelection").value)
         
-        
+        // check whether team already has three players
+        // disabled now (commented out) because of new dropdown list implementation
+        // populated teams no longer display in team select option when adding new player
+        // const playersArray = getPlayers()
+        // let playerCounter = 0
+
+        // for (let i = 0; i < playersArray.length; i++) {
+        //     if (playersArray[i].teamId === inputTeamId) {
+        //         playerCounter += 1;
+        //     }
+        // }
+
+        // if (playerCounter >= 3) {
+        //     alert("Team already has three players assigned.")
+        //     return
+        // }
         
         const DataForAPI = {
             firstName: inputFirstName,
