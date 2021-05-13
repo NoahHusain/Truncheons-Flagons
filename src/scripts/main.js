@@ -14,6 +14,7 @@ const renderHTML = () => {
     )
 }
 
+// Event listener once API has been updated to generate all html again
 mainContainer.addEventListener(
     "stateChanged",
     CustomEvent => {
