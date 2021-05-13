@@ -52,7 +52,7 @@ mainContainer.addEventListener("click",
 export const Rules = () => {
     let html = `
     <div class="rules__field">
-        <h1> Game Rules</h1>
+        <h2> Game Rules</h2>
         <ol>
          <li>Three teams. Three players each. Three rounds.</li>
          <li>Each round, one team (role: Knights) throws a ball at one of six flagons. If the ball enters, this team wins 2 pts; else if it lands on the table 1pt; else 0pts.</li>
