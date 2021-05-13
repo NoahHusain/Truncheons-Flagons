@@ -98,9 +98,16 @@ mainContainer.addEventListener(
     (clickEvent) => {
         const currentRound = getCurrentRound()
         if (clickEvent.target.id === 'submitScores' && currentRound > 3) {
-            const team1CurrentScore = getTeam1CurrentScore()
-            team1CurrentScore.timestamp = Date.now()
-            sendCurrentScores(team1CurrentScore)
+            // const team1CurrentScore = getTeam1CurrentScore()
+            // team1CurrentScore.timestamp = Date.now()
+            // sendCurrentScores(team1CurrentScore)
+            const modal = document.querySelector("myModal");
+            const btn = docume
+            const span = document.getElementsByClassName("close")[0];
+            modal.style.display = "block";
+            span.onclick = function() {
+                modal.style.display = "none";
+              }
         }
     }
 )

@@ -2,6 +2,7 @@
 @import "../styles/playerinput.css";
 @import url("./currentgame.css");
 @import "../styles/teaminput.css";
+@import url("./gamewinnerbox.css");
 
 body {
   font-family: "MedievalSharp", cursive;
