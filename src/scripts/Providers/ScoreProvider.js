@@ -40,10 +40,29 @@ mainContainer.addEventListener(
     "click",
     (clickEvent) => {
         if (clickEvent.target.id === 'submitScores') {
-            gameRoundIncrement()
+            
             const team1score = document.querySelector("input[name='team1Score']").value
             const team2score = document.querySelector("input[name='team2Score']").value
             const team3score = document.querySelector("input[name='team3Score']").value
+
+            const team1scoreINT = parseInt(team1score)
+            const team2scoreINT = parseInt(team2score)
+            const team3scoreINT = parseInt(team3score)
+            
+            if (team1scoreINT < 0 || typeof team1scoreINT === "string" || isNaN(team1scoreINT)) {
+                alert("Score fields cannot be empty and must be an integer!")
+                return
+            }
+            else if (team2scoreINT < 0 || typeof team2scoreINT === "string" || isNaN(team2scoreINT)) {
+                alert("Score fields cannot be empty and must be an integer!")
+                return
+            }
+            else if (team3scoreINT < 0 || typeof team3scoreINT === "string" || isNaN(team3scoreINT)) {
+                alert("Score fields cannot be empty and must be an integer!")
+                return
+            }
+            else {
+            gameRoundIncrement()
             setTeam1score(parseInt(team1score))
             setTeam2score(parseInt(team2score))
             setTeam3score(parseInt(team3score))
@@ -52,6 +71,7 @@ mainContainer.addEventListener(
         ${scoreProvider()}
         ${printCurrentRound()}
         ${currentGame()}`
+    }
         }
     }
 )
