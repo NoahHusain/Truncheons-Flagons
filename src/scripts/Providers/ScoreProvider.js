@@ -51,7 +51,7 @@ mainContainer.addEventListener(
             gamePlay.innerHTML = `
         ${scoreProvider()}
         ${printCurrentRound()}
-        ${currentGame()}
+        ${currentGame()}`
         }
     }
 )
