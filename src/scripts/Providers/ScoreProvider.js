@@ -1,5 +1,5 @@
 // get current list of teams from app state in database
-import { getTeams, getTeam1CurrentScore, getTeam2CurrentScore, getTeam3CurrentScore, setTeam1score, setTeam2score, setTeam3score, getCurrentRound, setCurrentRound, sendCurrentScore, } from "../databaseAccess.js"
+import { getTeams, getTeam1CurrentScore, getTeam2CurrentScore, getTeam3CurrentScore, setTeam1score, setTeam2score, setTeam3score, getCurrentRound, setCurrentRound, sendCurrentScores, } from "../databaseAccess.js"
 import { currentGame } from "../Stats/Score.js";
 
 const mainContainer = document.querySelector("#container")
@@ -80,15 +80,7 @@ mainContainer.addEventListener(
         if (clickEvent.target.id === 'submitScores' && currentRound > 3) {
             const team1CurrentScore = getTeam1CurrentScore()
             team1CurrentScore.timestamp = Date.now()
-            const team2CurrentScore = getTeam2CurrentScore()
-            team2CurrentScore.timestamp = Date.now()
-            const team3CurrentScore = getTeam3CurrentScore()
-            team3CurrentScore.timestamp = Date.now()
-            sendCurrentScore(team1CurrentScore).then(
-            sendCurrentScore(team2CurrentScore)).then(
-            sendCurrentScore(team3CurrentScore)).then(
-            mainContainer.dispatchEvent(new CustomEvent('resetTempState'))).then(
-            mainContainer.dispatchEvent(new CustomEvent('stateChanged')))
+            sendCurrentScores(team1CurrentScore)
         }
     }
 )
