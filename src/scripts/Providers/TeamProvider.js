@@ -25,6 +25,16 @@ mainContainer.addEventListener("click", clickEvent => {
         const creationDate = new Date(Date.now()).toLocaleString("en-US")
         
         const teamsArray = getTeams()
+
+        // checkpoint to see whether input team name is already in the JSON database
+        for (let i = 0; i < teamsArray.length; i++) {
+            if (teamsArray[i].name === inputTeamName) {
+                alert("Team name already in use")
+                return
+            }
+        }
+
+
         const newTeamId = teamsArray.length + 1
         const DataForAPI = {
             dateCreated: creationDate,

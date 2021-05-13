@@ -16,14 +16,14 @@
       "dateCreated": "01/05/2021"
     },
     {
-      "dateCreated": "5/12/2021, 10:03:13 PM",
-      "name": "Killer Wenches",
+      "dateCreated": "5/13/2021, 10:26:49 AM",
+      "name": "Helgen",
       "id": 4,
       "playerCount": 0
     },
     {
-      "dateCreated": "5/13/2021, 10:26:56 AM",
-      "name": "Unicorns of Love and Hope",
+      "dateCreated": "5/13/2021, 10:27:50 AM",
+      "name": "Helgen",
       "id": 5,
       "playerCount": 0
     }
@@ -98,20 +98,6 @@
       "country": "Canada",
       "teamId": 3,
       "id": 10
-    },
-    {
-      "firstName": "Caleb",
-      "lastName": "Inman",
-      "country": "USA",
-      "teamId": 4,
-      "id": 11
-    },
-    {
-      "firstName": "Noah",
-      "lastName": "Husain",
-      "country": "USA",
-      "teamId": 5,
-      "id": 12
     }
   ],
   "scores": [
@@ -140,25 +126,30 @@
       "timestamp": 1620238696239
     },
     {
-      "id": 5,
-      "teamId": 2,
-      "score": 1,
-      "timestamp": 1620238696239
-    },
-    {
-      "id": 6,
-      "teamId": 3,
-      "score": 2,
-      "timestamp": 1620238696239
-    },
-    {
-      "id": 7,
       "teamId": 1,
-      "score": 1,
-      "timestamp": 1620238792447
+      "score": 3,
+      "timestamp": 1620923227294,
+      "id": 5
     },
     {
-      "id": 8,
+      "teamId": 2,
+      "score": 3,
+      "timestamp": 1620923227307,
+      "id": 6
+    },
+    {
+      "teamId": 3,
+      "score": 3,
+      "timestamp": 1620923227319,
+      "id": 7
+    },
+    {
+      "teamId": 1,
+      "score": 3,
+      "timestamp": 1620923289294,
+      "id": 8
+    },
+    {
       "teamId": 2,
       "score": 1,
       "timestamp": 1620238792447
@@ -170,196 +161,19 @@
       "timestamp": 1620238792447
     },
     {
-      "teamId": 2,
-      "score": 3,
-      "timestamp": 1620856329197,
-      "id": 10
-    },
-    {
-      "teamId": 1,
-      "score": 3,
-      "timestamp": 1620856329197,
-      "id": 11
-    },
-    {
-      "teamId": 3,
-      "score": 3,
-      "timestamp": 1620856329197,
-      "id": 12
-    },
-    {
-      "teamId": 1,
-      "score": 3,
-      "timestamp": 1620856422291,
-      "id": 13
-    },
-    {
-      "teamId": 2,
-      "score": 3,
-      "timestamp": 1620856422291,
-      "id": 14
-    },
-    {
-      "teamId": 3,
-      "score": 3,
-      "timestamp": 1620856422291,
-      "id": 15
-    },
-    {
-      "teamId": 2,
-      "score": 4,
-      "timestamp": 1620858996579,
-      "id": 16
-    },
-    {
-      "teamId": 1,
-      "score": 4,
-      "timestamp": 1620858996579,
-      "id": 17
-    },
-    {
-      "teamId": 3,
-      "score": 4,
-      "timestamp": 1620858996579,
-      "id": 18
-    },
-    {
-      "id": 19,
+      "id": 10,
       "teamId": 4,
       "score": 0,
-      "timestamp": 1620874993700
+      "timestamp": 1620919614548
     },
     {
-      "teamId": 1,
-      "score": 3,
-      "timestamp": 1620875048520,
-      "id": 20
-    },
-    {
-      "teamId": 4,
-      "score": 3,
-      "timestamp": 1620875048520,
-      "id": 21
-    },
-    {
-      "teamId": 3,
-      "score": 3,
-      "timestamp": 1620875048520,
-      "id": 22
-    },
-    {
-      "teamId": 1,
-      "score": 3,
-      "timestamp": 1620875120228,
-      "id": 23
-    },
-    {
-      "teamId": 4,
-      "score": 3,
-      "timestamp": 1620875120228,
-      "id": 24
-    },
-    {
-      "teamId": 3,
-      "score": 4,
-      "timestamp": 1620875120228,
-      "id": 25
-    },
-    {
-      "teamId": 1,
-      "score": 3,
-      "timestamp": 1620917312101,
-      "id": 26
-    },
-    {
-      "teamId": 2,
-      "score": 3,
-      "timestamp": 1620917312101,
-      "id": 27
-    },
-    {
-      "teamId": 4,
-      "score": 3,
-      "timestamp": 1620917312101,
-      "id": 28
-    },
-    {
-      "teamId": 1,
-      "score": 3,
-      "timestamp": 1620918267112,
-      "id": 29
-    },
-    {
-      "teamId": 3,
-      "score": 3,
-      "timestamp": 1620918267112,
-      "id": 30
-    },
-    {
-      "teamId": 4,
-      "score": 3,
-      "timestamp": 1620918267112,
-      "id": 31
-    },
-    {
-      "teamId": 1,
-      "score": 3,
-      "timestamp": 1620918295939,
-      "id": 32
-    },
-    {
-      "teamId": 2,
-      "score": 3,
-      "timestamp": 1620918295939,
-      "id": 33
-    },
-    {
-      "teamId": 3,
-      "score": 3,
-      "timestamp": 1620918295939,
-      "id": 34
-    },
-    {
-      "teamId": 1,
-      "score": 4,
-      "timestamp": 1620919587053,
-      "id": 35
-    },
-    {
-      "teamId": 2,
-      "score": 4,
-      "timestamp": 1620919587053,
-      "id": 36
-    },
-    {
-      "teamId": 3,
-      "score": 4,
-      "timestamp": 1620919587053,
-      "id": 37
-    },
-    {
-      "id": 38,
+      "id": 11,
       "teamId": 5,
       "score": 0,
-      "timestamp": 1620919616850
-    },
-    {
-      "teamId": 1,
-      "score": 0,
-      "timestamp": 1620921572126,
-      "id": 39
-    },
-    {
-      "teamId": 2,
-      "score": 0,
-      "timestamp": 1620921572126,
-      "id": 40
-    },
-    {
-      "teamId": 3,
-      "score": 0,
-      "timestamp": 1620921572126,
-      "id": 41
+      "timestamp": 1620919676122
+      "score": 3,
+      "timestamp": 1620923289307,
+      "id": 9
     }
   ]
 }

@@ -49,7 +49,10 @@ mainContainer.addEventListener("change", changeEvent => {
         const team3CurrentScore = getTeam3CurrentScore()
         if (team1CurrentScore.teamId > 0 &&
             team2CurrentScore.teamId > 0 &&
-            team3CurrentScore.teamId > 0) {
+            team3CurrentScore.teamId > 0 &&
+            team1CurrentScore.teamId != team2CurrentScore.teamId &&
+            team1CurrentScore.teamId != team3CurrentScore.teamId &&
+            team2CurrentScore.teamId != team3CurrentScore.teamId) {
             const gamePlay = document.querySelector(".game__play")
                 gamePlay.innerHTML = `
                 ${scoreProvider()}
@@ -67,7 +70,10 @@ mainContainer.addEventListener("change", changeEvent => {
         const team3CurrentScore = getTeam3CurrentScore()
         if (team1CurrentScore.teamId > 0 &&
             team2CurrentScore.teamId > 0 &&
-            team3CurrentScore.teamId > 0) {
+            team3CurrentScore.teamId > 0 &&
+            team2CurrentScore.teamId != team1CurrentScore.teamId &&
+            team2CurrentScore.teamId != team3CurrentScore.teamId &&
+            team1CurrentScore.teamId != team3CurrentScore.teamId) {
             const gamePlay = document.querySelector(".game__play")
                 gamePlay.innerHTML = `
                 ${scoreProvider()}
@@ -85,12 +91,17 @@ mainContainer.addEventListener("change", changeEvent => {
         const team3CurrentScore = getTeam3CurrentScore()
         if (team1CurrentScore.teamId > 0 &&
             team2CurrentScore.teamId > 0 &&
-            team3CurrentScore.teamId > 0) {
+            team3CurrentScore.teamId > 0 &&
+            team3CurrentScore.teamId != team1CurrentScore.teamId &&
+            team3CurrentScore.teamId != team2CurrentScore.teamId &&
+            team1CurrentScore.teamId != team2CurrentScore.teamId) {
             const gamePlay = document.querySelector(".game__play")
                 gamePlay.innerHTML = `
                 ${scoreProvider()}
                 ${printCurrentRound()}
                 ${currentGame()}`
+        } else {
+            alert("Same team selected multiple times.")
         }
     }
 }
