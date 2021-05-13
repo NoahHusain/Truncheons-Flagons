@@ -91,6 +91,13 @@
       "lastName": "Hardy",
       "country": "Spain",
       "teamId": 3
+    },
+    {
+      "firstName": "John",
+      "lastName": "Doe",
+      "country": "Canada",
+      "teamId": 3,
+      "id": 10
     }
   ],
   "scores": [
@@ -119,25 +126,30 @@
       "timestamp": 1620238696239
     },
     {
-      "id": 5,
-      "teamId": 2,
-      "score": 1,
-      "timestamp": 1620238696239
-    },
-    {
-      "id": 6,
-      "teamId": 3,
-      "score": 2,
-      "timestamp": 1620238696239
-    },
-    {
-      "id": 7,
       "teamId": 1,
-      "score": 1,
-      "timestamp": 1620238792447
+      "score": 3,
+      "timestamp": 1620923227294,
+      "id": 5
     },
     {
-      "id": 8,
+      "teamId": 2,
+      "score": 3,
+      "timestamp": 1620923227307,
+      "id": 6
+    },
+    {
+      "teamId": 3,
+      "score": 3,
+      "timestamp": 1620923227319,
+      "id": 7
+    },
+    {
+      "teamId": 1,
+      "score": 3,
+      "timestamp": 1620923289294,
+      "id": 8
+    },
+    {
       "teamId": 2,
       "score": 1,
       "timestamp": 1620238792447
@@ -159,6 +171,9 @@
       "teamId": 5,
       "score": 0,
       "timestamp": 1620919676122
+      "score": 3,
+      "timestamp": 1620923289307,
+      "id": 9
     }
   ]
 }

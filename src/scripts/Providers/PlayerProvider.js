@@ -4,7 +4,7 @@ import { teamOptionList } from "../Lists/TeamList.js"
 export const newPlayerForm = () => {
     let html = `
     <div class="field">
-        <label class="label" for="firstName">Fist Name</label>
+        <label class="label" for="firstName">First Name</label>
         <input type="text" name="firstName" class="input"/>
     </div>
 
