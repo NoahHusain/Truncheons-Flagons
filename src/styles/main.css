@@ -5,7 +5,7 @@
 
 
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'MedievalSharp', cursive;
     margin: 2rem;
     padding: 0;
     background-image: url('../images/scroll1.jpg');
@@ -32,6 +32,15 @@ h2 {
     margin: 0rem;
 }
 
+h3 {
+    font-family: 'MedievalSharp', cursive;
+    text-align: center;
+    text-decoration: underline overline aliceblue;
+    padding: 0rem;
+    margin: 1rem 0rem;
+    font-size: xx-large;
+}
+
 .truncheons__container {
     display: flex;
     justify-content: space-between;
@@ -49,4 +58,31 @@ h2 {
 .game__play {
     flex: 2;
     margin: 2rem;
+    padding: 2rem;
+    background-color:rgba(240, 211, 169, 0.4);
+    border: 1px solid black;
+    box-shadow: 0px 0px 10px rgb(107, 81, 10);
+    border-radius: 1rem;
+}
+
+#start__button {
+    display: block;
+    text-align: center;
+    margin: 1rem auto .5rem auto;
+    font-family: 'MedievalSharp', cursive;
+    padding: .3rem .3rem;
+    font-size: larger;
+}
+
+#submitScores {
+    display: block;
+    text-align: center;
+    margin: 1rem auto .5rem auto;
+    font-family: 'MedievalSharp', cursive;
+    padding: .3rem .3rem;
+    font-size: larger;
+}
+
+.currentGame {
+    margin-top: 1.8rem;
 }
