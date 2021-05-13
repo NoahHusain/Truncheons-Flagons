@@ -3,42 +3,41 @@
 @import url("./currentgame.css");
 @import "../styles/teaminput.css";
 
-
 body {
-    font-family: 'MedievalSharp', cursive;
-    margin: 2rem;
-    padding: 0;
-    background-image: url('../images/scroll1.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-color: black;
+  font-family: "MedievalSharp", cursive;
+  margin: 2rem;
+  padding: 0;
+  background-image: url("../images/scroll1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: black;
 }
 
 h1 {
-    font-family: 'MedievalSharp', cursive;
-    font-weight: bolder;
-    font-size: 300%;
-    text-align: center;
-    padding: 0rem;
-    margin: 1.5rem;
-    text-decoration: underline overline aliceblue;
+  font-family: "MedievalSharp", cursive;
+  font-weight: bolder;
+  font-size: 300%;
+  text-align: center;
+  padding: 0rem;
+  margin: 1.5rem;
+  text-decoration: underline overline aliceblue;
 }
 
 h2 {
-    font-family: 'MedievalSharp', cursive;
-    text-align: center;
-    text-decoration: underline overline aliceblue;
-    padding: 0rem;
-    margin: 0rem;
+  font-family: "MedievalSharp", cursive;
+  text-align: center;
+  text-decoration: underline overline aliceblue;
+  padding: 0rem;
+  margin: 0rem;
 }
 
 h3 {
-    font-family: 'MedievalSharp', cursive;
-    text-align: center;
-    text-decoration: underline overline aliceblue;
-    padding: 0rem;
-    margin: 1rem 0rem;
-    font-size: xx-large;
+  font-family: "MedievalSharp", cursive;
+  text-align: center;
+  text-decoration: underline overline aliceblue;
+  padding: 0rem;
+  margin: 0rem 0rem;
+  font-size: xx-large;
 }
 
 .truncheons__container {
@@ -50,44 +49,44 @@ h3 {
 }
 
 .choices {
-    flex: 1;
+  flex: 1;
 }
 
 .new__leaderboard {
-    flex: 1;
+  flex: 1;
 }
 
 .game__play {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    flex: 2;
-    margin: 2rem;
-    padding: 2rem;
-    background-color:rgba(240, 211, 169, 0.4);
-    border: 1px solid black;
-    box-shadow: 0px 0px 10px rgb(107, 81, 10);
-    border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 2;
+  margin: 2rem;
+  padding: 2rem;
+  background-color: rgba(240, 211, 169, 0.4);
+  border: 1px solid black;
+  box-shadow: 0px 0px 10px rgb(107, 81, 10);
+  border-radius: 1rem;
 }
 
 #start__button {
-    display: block;
-    text-align: center;
-    margin: 1rem auto .5rem auto;
-    font-family: 'MedievalSharp', cursive;
-    padding: .3rem .3rem;
-    font-size: larger;
+  display: block;
+  text-align: center;
+  margin: 1rem auto 0.5rem auto;
+  font-family: "MedievalSharp", cursive;
+  padding: 0.3rem 0.3rem;
+  font-size: larger;
 }
 
 #submitScores {
-    display: block;
-    text-align: center;
-    margin: 1rem auto .5rem auto;
-    font-family: 'MedievalSharp', cursive;
-    padding: .3rem .3rem;
-    font-size: larger;
+  display: block;
+  text-align: center;
+  margin: 1rem auto 0.5rem auto;
+  font-family: "MedievalSharp", cursive;
+  padding: 0.3rem 0.3rem;
+  font-size: larger;
 }
 
 .currentGame {
-    margin-top: 1.8rem;
+  margin-top: 1.8rem;
 }

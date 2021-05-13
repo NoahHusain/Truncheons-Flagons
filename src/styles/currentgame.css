@@ -1,14 +1,36 @@
 .currentGame {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
 .teamscore__item {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .round__field {
-    text-align: center;
+  text-align: center;
+  font-size: 36px;
+  margin: 10px;
+}
+
+.team1 {
+  font-size: 24px;
+}
+.team2 {
+  font-size: 24px;
+}
+.team3 {
+  font-size: 24px;
+}
+
+.team1score {
+  font-size: 24px;
+}
+.team2score {
+  font-size: 24px;
+}
+.team3score {
+  font-size: 24px;
 }

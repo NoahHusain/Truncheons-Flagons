@@ -1,4 +1,5 @@
 import { teamOptionList } from "../Lists/TeamList.js"
+import { getPlayers } from "../databaseAccess.js"
  
 // render function for new player form
 export const newPlayerForm = () => {
@@ -47,7 +48,20 @@ mainContainer.addEventListener("click", clickEvent => {
 
         const inputTeamId = parseInt(document.querySelector("#teamSelection").value)
         
-        
+        // check whether team already has three players
+        const playersArray = getPlayers()
+        let playerCounter = 0
+
+        for (let i = 0; i < playersArray.length; i++) {
+            if (playersArray[i].teamId === inputTeamId) {
+                playerCounter += 1;
+            }
+        }
+
+        if (playerCounter >= 3) {
+            alert("Team already has three players assigned.")
+            return
+        }
         
         const DataForAPI = {
             firstName: inputFirstName,
