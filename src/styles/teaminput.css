@@ -12,6 +12,9 @@
 .team__field {
     margin-top: .5rem;
     text-align: center;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
 }
 
 #submitTeam {
