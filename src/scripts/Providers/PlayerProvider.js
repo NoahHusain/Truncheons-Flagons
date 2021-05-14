@@ -53,14 +53,18 @@ mainContainer.addEventListener("click", clickEvent => {
         let inputCountry = document.querySelector("input[name='countryOfOrigin']").value
         const inputTeamId = parseInt(document.querySelector("#teamSelection").value)
 
-        //check to see if fields are empty
+        //check to see if individual fields are empty// each empty field is set to red
         if (inputFirstName === "") {firstNameField.style.background = "#fc7878"}
         if (inputLastName === "") {lastNameField.style.background = "#fc7878"}
         if (inputCountry === "") {countryField.style.background = "#fc7878"}
+        
+        //check to see if a team is chosen, if not, message box appears and event listener returns before sending data to API
         if (inputTeamId === 0) {
             MessageBox("Please select a team")
             return
         }
+
+        //checks to see if any fields are empty, if so, event listener returns before sending data to API
         if (inputFirstName === "" || inputLastName === "" || inputCountry === "") {return}
 
 
