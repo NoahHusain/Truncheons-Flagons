@@ -1,5 +1,6 @@
 // get current list of teams from app state in database
 import { getTeams, getTeam1CurrentScore, getTeam2CurrentScore, getTeam3CurrentScore, setTeam1score, setTeam2score, setTeam3score, getCurrentRound, setCurrentRound, sendCurrentScores, } from "../databaseAccess.js"
+import { MessageBox } from "../MessageBox.js";
 import { currentGame } from "../Stats/Score.js";
 
 const mainContainer = document.querySelector("#container")
@@ -49,16 +50,18 @@ mainContainer.addEventListener(
             const team2scoreINT = parseInt(team2score)
             const team3scoreINT = parseInt(team3score)
             
+            const messageText = "Please enter a valid score for each team"
+
             if (team1scoreINT < 0 || typeof team1scoreINT === "string" || isNaN(team1scoreINT)) {
-                alert("Score fields cannot be empty and must be an integer!")
+                MessageBox(messageText)
                 return
             }
             else if (team2scoreINT < 0 || typeof team2scoreINT === "string" || isNaN(team2scoreINT)) {
-                alert("Score fields cannot be empty and must be an integer!")
+                MessageBox(messageText)
                 return
             }
             else if (team3scoreINT < 0 || typeof team3scoreINT === "string" || isNaN(team3scoreINT)) {
-                alert("Score fields cannot be empty and must be an integer!")
+                MessageBox(messageText)
                 return
             }
             else {
@@ -101,6 +104,40 @@ mainContainer.addEventListener(
             const team1CurrentScore = getTeam1CurrentScore()
             team1CurrentScore.timestamp = Date.now()
             sendCurrentScores(team1CurrentScore)
+            const teams = getTeams()
+            const foundTeam1 = teams.find(team => team.id === team1CurrentScore.teamId)
+            const team2CurrentScore = getTeam2CurrentScore()
+            const foundTeam2 = teams.find(team => team.id === team2CurrentScore.teamId)
+            const team3CurrentScore = getTeam3CurrentScore()
+            const foundTeam3 = teams.find(team => team.id === team3CurrentScore.teamId)
+            let messageText
+            if ((team1CurrentScore.score === team2CurrentScore.score) &&
+                (team1CurrentScore.score === team3CurrentScore.score)) {
+                messageText = "It's a tie! Everyone wins!"
+            } else if (
+                (team1CurrentScore.score === team2CurrentScore.score) &&
+                (team1CurrentScore.score > team3CurrentScore.score)) {
+                    messageText = `It's a tie between ${foundTeam1.name} and ${foundTeam2.name}!`
+            } else if (
+                (team1CurrentScore.score === team3CurrentScore.score) &&
+                (team1CurrentScore.score > team2CurrentScore.score)) {
+                    messageText = `It's a tie between ${foundTeam1.name} and ${foundTeam3.name}!`
+            } else if (
+                (team2CurrentScore.score === team3CurrentScore.score) &&
+                (team2CurrentScore.score > team1CurrentScore.score)) {
+                    messageText = `It's a tie between ${foundTeam2.name} and ${foundTeam3.name}!`
+            } else if (
+                (team1CurrentScore.score > team2CurrentScore.score) &&
+                (team1CurrentScore.score > team3CurrentScore.score)) {
+                    messageText = `${foundTeam1.name} is the winner!`
+            } else if (
+                (team2CurrentScore.score > team1CurrentScore.score) &&
+                (team2CurrentScore.score > team3CurrentScore.score)) {
+                    messageText = `${foundTeam2.name} is the winner!`
+            } else {
+                    messageText = `${foundTeam3.name} is the winner!`
+            }
+            MessageBox(messageText)
         }
     }
 )

@@ -16,3 +16,7 @@ ol {
   letter-spacing: 0.05rem;
   font-size: 1.1rem;
 }
+
+li {
+  font-weight: 450;
+}
