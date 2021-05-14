@@ -10,9 +10,10 @@ body {
   margin: 2rem;
   padding: 0;
   background-image: url("../images/tavern2.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-color: black;
+  background-attachment: fixed; 
+  background-position: center;
+  background-repeat: no-repeat; 
+  background-size: cover; 
 }
 
 h1 {
