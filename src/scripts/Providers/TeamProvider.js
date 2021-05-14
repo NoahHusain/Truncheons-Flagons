@@ -1,11 +1,12 @@
 import { getTeams, getScores, getPlayers } from "../databaseAccess.js"
+import { MessageBox } from "../MessageBox.js"
 
 // render function for new team form
 export const newTeamForm = () => {
     let html = `
     <div class="team__field">
         <label class="label" for="teamName">Team Name</label>
-        <input type="text" name="teamName" class="input"/>
+        <input type="text" name="teamName" class="input inputNewTeam"/>
     </div>
  
     <button class="button" id="submitTeam">Create Team</button> 
@@ -21,7 +22,15 @@ mainContainer.addEventListener("click", clickEvent => {
     if (clickEvent.target.id === "submitTeam") {
 
         // grab user input
-        const inputTeamName = document.querySelector("input[name='teamName']").value
+        let inputTeamName = document.querySelector("input[name='teamName']").value
+
+        //check to see if field is empty
+        if (inputTeamName === "") {
+            const newTeamField = document.querySelector(".inputNewTeam")
+            newTeamField.style.background = "#fc7878"
+            return
+        }
+
         const creationDate = new Date(Date.now()).toLocaleString("en-US")
         
         const teamsArray = getTeams()
@@ -29,7 +38,7 @@ mainContainer.addEventListener("click", clickEvent => {
         // checkpoint to see whether input team name is already in the JSON database
         for (let i = 0; i < teamsArray.length; i++) {
             if (teamsArray[i].name === inputTeamName) {
-                alert("Team name already in use")
+                MessageBox("Team name already in use")
                 return
             }
         }

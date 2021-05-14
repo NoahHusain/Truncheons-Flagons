@@ -14,6 +14,8 @@
   /* Modal Content/Box */
   .modal-content {
     background-color: #fefefe;
+    background-image: url("../images/scroll1.jpg");
+    background-position: center;
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 4px solid black;
