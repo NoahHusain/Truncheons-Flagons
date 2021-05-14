@@ -1,28 +1,29 @@
 import { addToTeamDropdown } from "../Lists/TeamList.js"
 import { getPlayers } from "../databaseAccess.js"
- 
+import { MessageBox } from "../MessageBox.js"
+
 // render function for new player form
 export const newPlayerForm = () => {
     let html = `
     <div class="field">
         <label class="label" for="firstName">First Name</label>
-        <input type="text" name="firstName" class="input"/>
+        <input type="text" name="firstName" class="input inputFirstName"/>
     </div>
 
     <div class="field">
         <label class="label" for="lastName">Last Name</label>
-        <input type="text" name="lastName" class="input"/>
+        <input type="text" name="lastName" class="input inputLastName"/>
     </div>
 
     <div class="field">
         <label class="label" for="countryOfOrigin">Country of Origin</label>
-        <input type="text" name="countryOfOrigin" class="input"/>
+        <input type="text" name="countryOfOrigin" class="input inputCountry"/>
     </div>
 
     <div class="field">
         <label class="label" for="teamSelection">Select a team:</label>
         <select id="teamSelection" class="dropdownList">
-            ${ addToTeamDropdown() }
+            ${addToTeamDropdown()}
             </select>
     </div>
  
@@ -37,17 +38,32 @@ const mainContainer = document.querySelector("#container")
 mainContainer.addEventListener("click", clickEvent => {
 
     if (clickEvent.target.id === "submitPlayer") {
-
+   
+        //reset field background color to white
+        const firstNameField = document.querySelector(".inputFirstName")
+        firstNameField.style.background = "white"
+        const lastNameField = document.querySelector(".inputLastName")
+        lastNameField.style.background = "white"
+        const countryField = document.querySelector(".inputCountry")
+        countryField.style.background = "white"
+        
         // grab user input
-        const inputFirstName = document.querySelector("input[name='firstName']").value
-        const inputLastName = document.querySelector("input[name='lastName']").value
-        const inputCountry = document.querySelector("input[name='countryOfOrigin']").value
-        
-        // function to access id of option element below
-
-
+        let inputFirstName = document.querySelector("input[name='firstName']").value
+        let inputLastName = document.querySelector("input[name='lastName']").value
+        let inputCountry = document.querySelector("input[name='countryOfOrigin']").value
         const inputTeamId = parseInt(document.querySelector("#teamSelection").value)
-        
+
+        //check to see if fields are empty
+        if (inputFirstName === "") {firstNameField.style.background = "#fc7878"}
+        if (inputLastName === "") {lastNameField.style.background = "#fc7878"}
+        if (inputCountry === "") {countryField.style.background = "#fc7878"}
+        if (inputTeamId === 0) {
+            MessageBox("Please select a team")
+            return
+        }
+        if (inputFirstName === "" || inputLastName === "" || inputCountry === "") {return}
+
+
         // check whether team already has three players
         // disabled now (commented out) because of new dropdown list implementation
         // populated teams no longer display in team select option when adding new player
@@ -64,7 +80,7 @@ mainContainer.addEventListener("click", clickEvent => {
         //     alert("Team already has three players assigned.")
         //     return
         // }
-        
+
         const DataForAPI = {
             firstName: inputFirstName,
             lastName: inputLastName,
@@ -74,7 +90,9 @@ mainContainer.addEventListener("click", clickEvent => {
         }
         // call Post API function on sendDataToAPI
         sendPlayerToAPI(DataForAPI)
+
     }
+
 })
 
 

@@ -5,7 +5,7 @@ export const newTeamForm = () => {
     let html = `
     <div class="team__field">
         <label class="label" for="teamName">Team Name</label>
-        <input type="text" name="teamName" class="input"/>
+        <input type="text" name="teamName" class="input inputNewTeam"/>
     </div>
  
     <button class="button" id="submitTeam">Create Team</button> 
@@ -21,7 +21,15 @@ mainContainer.addEventListener("click", clickEvent => {
     if (clickEvent.target.id === "submitTeam") {
 
         // grab user input
-        const inputTeamName = document.querySelector("input[name='teamName']").value
+        let inputTeamName = document.querySelector("input[name='teamName']").value
+
+        //check to see if field is empty
+        if (inputTeamName === "") {
+            const newTeamField = document.querySelector(".inputNewTeam")
+            newTeamField.style.background = "#fc7878"
+            return
+        }
+
         const creationDate = new Date(Date.now()).toLocaleString("en-US")
         
         const teamsArray = getTeams()

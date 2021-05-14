@@ -33,7 +33,7 @@ const teamListItem = (team) => {
 export const addToTeamDropdown = () => {
     const teamsArray = getTeams()
     return `
-        <option>--choose one!--</option>
+        <option value="0">--choose one!--</option>
         ${teamsArray.map(newTeamListItem).join("\n")}
         </select>
     `

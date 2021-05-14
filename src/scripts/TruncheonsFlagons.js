@@ -43,7 +43,13 @@ export const TruncheonsFlagons = () => {
 mainContainer.addEventListener("click",
     clickEvent => {
         if (clickEvent.target.id === "start__button") {
+            const newPlayer = document.querySelector(".new__player")
+            const newTeam = document.querySelector(".new__team")
             const gamePlay = document.querySelector(".game__play")
+            newPlayer.innerHTML = `<h2>New Player</h2>
+            ${newPlayerForm()}`
+            newTeam.innerHTML = `<h2>New Team</h2>
+            ${newTeamForm()}`
             gamePlay.innerHTML = `${selectGameplayTeams()}`
         }
     })
