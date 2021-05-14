@@ -1,5 +1,6 @@
 // get current list of teams from app state in database
 import { getTeams, getTeam1CurrentScore, getTeam2CurrentScore, getTeam3CurrentScore, setTeam1score, setTeam2score, setTeam3score, getCurrentRound, setCurrentRound, sendCurrentScores, } from "../databaseAccess.js"
+import { MessageBox } from "../MessageBox.js";
 import { currentGame } from "../Stats/Score.js";
 
 const mainContainer = document.querySelector("#container")
@@ -49,16 +50,18 @@ mainContainer.addEventListener(
             const team2scoreINT = parseInt(team2score)
             const team3scoreINT = parseInt(team3score)
             
+            const messageText = "Please enter a valid score for each team"
+
             if (team1scoreINT < 0 || typeof team1scoreINT === "string" || isNaN(team1scoreINT)) {
-                alert("Score fields cannot be empty and must be an integer!")
+                MessageBox(messageText)
                 return
             }
             else if (team2scoreINT < 0 || typeof team2scoreINT === "string" || isNaN(team2scoreINT)) {
-                alert("Score fields cannot be empty and must be an integer!")
+                MessageBox(messageText)
                 return
             }
             else if (team3scoreINT < 0 || typeof team3scoreINT === "string" || isNaN(team3scoreINT)) {
-                alert("Score fields cannot be empty and must be an integer!")
+                MessageBox(messageText)
                 return
             }
             else {
@@ -110,7 +113,7 @@ mainContainer.addEventListener(
             let messageText
             if ((team1CurrentScore.score === team2CurrentScore.score) &&
                 (team1CurrentScore.score === team3CurrentScore.score)) {
-                messageText = "It's a tie between all three teams!"
+                messageText = "It's a tie! Everyone wins!"
             } else if (
                 (team1CurrentScore.score === team2CurrentScore.score) &&
                 (team1CurrentScore.score > team3CurrentScore.score)) {
@@ -134,19 +137,7 @@ mainContainer.addEventListener(
             } else {
                     messageText = `${foundTeam3.name} is the winner!`
             }
-            const modal = document.querySelector("#myModal");
-            const span = document.querySelector(".close-modal");
-            const message = document.querySelector("#modal-message")
-            message.innerHTML = messageText
-            modal.style.display = "block";
-            span.onclick = () => {
-                modal.style.display = "none";
-              }
-              window.onclick = (event) => {
-                if (event.target == modal) {
-                  modal.style.display = "none";
-                }
-              }
+            MessageBox(messageText)
         }
     }
 )

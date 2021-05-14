@@ -1,4 +1,5 @@
 import { getPlayers, getTeam1CurrentScore, getTeam2CurrentScore, getTeam3CurrentScore, getTeams, setTeam1id, setTeam2id, setTeam3id } from "../databaseAccess.js"
+import { MessageBox } from "../MessageBox.js";
 import { printCurrentRound, scoreProvider } from "../Providers/ScoreProvider.js"
 import { currentGame } from "../Stats/Score.js";
 
@@ -13,7 +14,7 @@ export const teamOptionList = () => {
 }
 
 const teamListItem = (team) => {
-    
+
     const playersArray = getPlayers()
     let teamPlayerCounter = 0
 
@@ -22,9 +23,9 @@ const teamListItem = (team) => {
             teamPlayerCounter += 1
         }
     }
-    
+
     if (teamPlayerCounter >= 3) {
-    return `<option value="${team.id}">${team.name}</option>`
+        return `<option value="${team.id}">${team.name}</option>`
     }
 }
 
@@ -47,9 +48,9 @@ const newTeamListItem = (team) => {
             teamPlayerCounter += 1
         }
     }
-    
+
     if (teamPlayerCounter < 3) {
-    return `<option value="${team.id}">${team.name}</option>`
+        return `<option value="${team.id}">${team.name}</option>`
     }
 }
 
@@ -91,7 +92,7 @@ mainContainer.addEventListener("change", changeEvent => {
             team1CurrentScore.teamId != team3CurrentScore.teamId &&
             team2CurrentScore.teamId != team3CurrentScore.teamId) {
             const gamePlay = document.querySelector(".game__play")
-                gamePlay.innerHTML = `
+            gamePlay.innerHTML = `
                 ${scoreProvider()}
                 ${printCurrentRound()}
                 ${currentGame()}`
@@ -112,7 +113,7 @@ mainContainer.addEventListener("change", changeEvent => {
             team2CurrentScore.teamId != team3CurrentScore.teamId &&
             team1CurrentScore.teamId != team3CurrentScore.teamId) {
             const gamePlay = document.querySelector(".game__play")
-                gamePlay.innerHTML = `
+            gamePlay.innerHTML = `
                 ${scoreProvider()}
                 ${printCurrentRound()}
                 ${currentGame()}`
@@ -133,12 +134,12 @@ mainContainer.addEventListener("change", changeEvent => {
             team3CurrentScore.teamId != team2CurrentScore.teamId &&
             team1CurrentScore.teamId != team2CurrentScore.teamId) {
             const gamePlay = document.querySelector(".game__play")
-                gamePlay.innerHTML = `
+            gamePlay.innerHTML = `
                 ${scoreProvider()}
                 ${printCurrentRound()}
                 ${currentGame()}`
         } else {
-            alert("Same team selected multiple times.")
+            MessageBox("The same team was selected more than once. Please select different teams.")
         }
     }
 }
