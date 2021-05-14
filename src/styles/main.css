@@ -2,7 +2,7 @@
 @import url("../styles/playerinput.css");
 @import url("./currentgame.css");
 @import url("../styles/teaminput.css");
-@import url("./gamewinnerbox.css");
+@import url("./messagebox.css");
 @import url("../styles/rules.css");
 
 body {
