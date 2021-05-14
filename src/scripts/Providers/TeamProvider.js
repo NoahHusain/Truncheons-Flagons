@@ -1,4 +1,5 @@
 import { getTeams, getScores, getPlayers } from "../databaseAccess.js"
+import { MessageBox } from "../MessageBox.js"
 
 // render function for new team form
 export const newTeamForm = () => {
@@ -37,7 +38,7 @@ mainContainer.addEventListener("click", clickEvent => {
         // checkpoint to see whether input team name is already in the JSON database
         for (let i = 0; i < teamsArray.length; i++) {
             if (teamsArray[i].name === inputTeamName) {
-                alert("Team name already in use")
+                MessageBox("Team name already in use")
                 return
             }
         }

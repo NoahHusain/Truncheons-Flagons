@@ -32,6 +32,12 @@
       "name": "Unicorns of Love and Hope",
       "id": 6,
       "playerCount": 0
+    },
+    {
+      "dateCreated": "5/14/2021, 10:14:44 AM",
+      "name": "Hrothgar",
+      "id": 7,
+      "playerCount": 0
     }
   ],
   "players": [
@@ -275,6 +281,12 @@
       "score": 3,
       "timestamp": 1620953304007,
       "id": 27
+    },
+    {
+      "id": 31,
+      "teamId": 7,
+      "score": 0,
+      "timestamp": 1621005284729
     }
   ]
 }
