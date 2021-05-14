@@ -58,17 +58,17 @@ mainContainer.addEventListener("click",
 export const Rules = () => {
     let html = `
     <div class="rules__field">
-        <h2> Game Rules</h2>
+        <h2>Rules</h2>
         <ol>
-         <li>Three teams. Three players each. Three rounds.</li>
-         <li>Each round, one team (role: Knights) throws a ball at one of six flagons. If the ball enters, this team wins 2 pts; else if it lands on the table 1pt; else 0pts.</li>
-         <li>Another team (role: Goblins) guards the flagons with small wooden truncheons. If the ball fails to hit a flagon or the table, this team wins 1pt; else 0pts.
+         <li>Three teams. Three players per team. Three rounds per game.</li>
+         <li>Each round, one team (role: Knights) throws a ball at one of six flagons. If the ball enters, this team wins {2 pts}; else, if it lands on the table {1pt}; else, {0pts}.</li>
+         <li>Another team (role: Goblins) guards the flagons with small wooden truncheons. If the ball fails to hit a flagon or the table, this team wins {1pt}; else, {0pts}.
          </li>
-         <li>The third team (role: Fairies) seeks to distract the other two teams. If the ball is dropped or thrown out of play, this team wins 1pt; else 0pts.
+         <li>The third team (role: Fairies) seeks to distract the other two teams. If the ball is dropped or thrown out of play, this team wins {1pt}; else, {0pts}.
          </li>
          <li>Each team switches to a new role each round.
          </li>
-         <li>The team with the most points at the end of round three wins.</li>
+         <li>The team with the greatest number of points at the end of Round Three wins.</li>
         </ol>
     </div>
     `
