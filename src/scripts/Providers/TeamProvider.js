@@ -77,7 +77,7 @@ const sendTeamToAPI = (teamObject) => {
         body: JSON.stringify(teamObject)
     }
 
-    return fetch("http://localhost:8088/teams", fetchOptions)
+    return fetch("https://truncheons-flagons-3bduf.ondigitalocean.app/teams", fetchOptions)
         .then(response => response.json())
         .then(() => {
             mainContainer.dispatchEvent(new CustomEvent("stateChanged"))
@@ -93,7 +93,7 @@ const sendScoreToAPI = (scoreObject) => {
         body: JSON.stringify(scoreObject)
     }
 
-    return fetch("http://localhost:8088/scores", fetchOptions)
+    return fetch("https://truncheons-flagons-3bduf.ondigitalocean.app/scores", fetchOptions)
         .then(response => response.json())
         .then(() => {
             mainContainer.dispatchEvent(new CustomEvent("stateChanged"))
