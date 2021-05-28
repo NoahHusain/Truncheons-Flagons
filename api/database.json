@@ -32,6 +32,24 @@
       "name": "Unicorns of Love and Hope",
       "id": 6,
       "playerCount": 0
+    },
+    {
+      "dateCreated": "5/14/2021, 4:02:25 PM",
+      "name": "Sherlock Watson's",
+      "id": 7,
+      "playerCount": 0
+    },
+    {
+      "dateCreated": "5/17/2021, 9:18:06 AM",
+      "name": "The Wombats",
+      "id": 8,
+      "playerCount": 0
+    },
+    {
+      "dateCreated": "5/19/2021, 9:47:11 PM",
+      "name": "The Mopey Mopers",
+      "id": 9,
+      "playerCount": 0
     }
   ],
   "players": [
@@ -111,6 +129,76 @@
       "country": "USA",
       "teamId": 6,
       "id": 11
+    },
+    {
+      "firstName": "Jonathan",
+      "lastName": "Watson",
+      "country": "USA",
+      "teamId": 7,
+      "id": 12
+    },
+    {
+      "firstName": "Devin",
+      "lastName": "Garcia",
+      "country": "USA",
+      "teamId": 8,
+      "id": 13
+    },
+    {
+      "firstName": "Noah",
+      "lastName": "Husain",
+      "country": "USA",
+      "teamId": 8,
+      "id": 14
+    },
+    {
+      "firstName": "Alex",
+      "lastName": "Lambrow",
+      "country": "USA",
+      "teamId": 8,
+      "id": 15
+    },
+    {
+      "firstName": "Grace",
+      "lastName": "Mortez",
+      "country": "USA",
+      "teamId": 7,
+      "id": 16
+    },
+    {
+      "firstName": "Maranda",
+      "lastName": "Anaya",
+      "country": "USA",
+      "teamId": 9,
+      "id": 17
+    },
+    {
+      "firstName": "Lamarr ",
+      "lastName": "Gaines",
+      "country": "USA",
+      "teamId": 9,
+      "id": 18
+    },
+    {
+      "firstName": "Connor",
+      "lastName": "Segneri",
+      "country": "USA",
+      "teamId": 9,
+      "id": 19
+    },
+    {
+      "firstName": "Payton",
+      "lastName": "Husain",
+      "country": "USA",
+      "teamId": 6,
+      "id": 20
+    },
+    {
+      "firstName": "Aubrey ",
+      "lastName": "Husain",
+      "country": "USA",
+      "teamId": 6,
+      "id": 21
     }
   ],
   "scores": [
@@ -275,6 +363,78 @@
       "score": 3,
       "timestamp": 1620953304007,
       "id": 27
+    },
+    {
+      "id": 28,
+      "teamId": 7,
+      "score": 0,
+      "timestamp": 1621026145603
+    },
+    {
+      "teamId": 1,
+      "score": 5,
+      "timestamp": 1621026290307,
+      "id": 29
+    },
+    {
+      "teamId": 2,
+      "score": 3,
+      "timestamp": 1621026290635,
+      "id": 30
+    },
+    {
+      "teamId": 3,
+      "score": 6,
+      "timestamp": 1621026290644,
+      "id": 31
+    },
+    {
+      "id": 32,
+      "teamId": 8,
+      "score": 0,
+      "timestamp": 1621261086431
+    },
+    {
+      "teamId": 8,
+      "score": 10,
+      "timestamp": 1621261376348,
+      "id": 33
+    },
+    {
+      "teamId": 1,
+      "score": 4,
+      "timestamp": 1621261376663,
+      "id": 34
+    },
+    {
+      "teamId": 2,
+      "score": 4,
+      "timestamp": 1621261376672,
+      "id": 35
+    },
+    {
+      "id": 36,
+      "teamId": 9,
+      "score": 0,
+      "timestamp": 1621478831647
+    },
+    {
+      "teamId": 6,
+      "score": 6,
+      "timestamp": 1621479092898,
+      "id": 37
+    },
+    {
+      "teamId": 9,
+      "score": 4,
+      "timestamp": 1621479093218,
+      "id": 38
+    },
+    {
+      "teamId": 8,
+      "score": 2,
+      "timestamp": 1621479093225,
+      "id": 39
     }
   ]
 }
