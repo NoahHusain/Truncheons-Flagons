@@ -76,8 +76,8 @@ const sendTeamToAPI = (teamObject) => {
         },
         body: JSON.stringify(teamObject)
     }
-// use AWS fetch calls
-    return fetch("Truncheons-API-dev.us-east-1.elasticbeanstalk.com/api/teams", fetchOptions)
+
+    return fetch("https://truncheons-flagons-api-n3a3b.ondigitalocean.app/teams", fetchOptions)
         .then(response => response.json())
         .then(() => {
             mainContainer.dispatchEvent(new CustomEvent("stateChanged"))
@@ -93,7 +93,7 @@ const sendScoreToAPI = (scoreObject) => {
         body: JSON.stringify(scoreObject)
     }
 
-    return fetch("Truncheons-API-dev.us-east-1.elasticbeanstalk.com/api/scores", fetchOptions)
+    return fetch("https://truncheons-flagons-api-n3a3b.ondigitalocean.app/scores", fetchOptions)
         .then(response => response.json())
         .then(() => {
             mainContainer.dispatchEvent(new CustomEvent("stateChanged"))
