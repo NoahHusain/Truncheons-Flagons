@@ -1,10 +1,10 @@
-import { addToTeamDropdown } from "../Lists/TeamList.js"
-import { getPlayers } from "../databaseAccess.js"
-import { MessageBox } from "../MessageBox.js"
+import { addToTeamDropdown } from "../Lists/TeamList.js";
+import { getPlayers } from "../databaseAccess.js";
+import { MessageBox } from "../MessageBox.js";
 
 // render function for new player form
 export const newPlayerForm = () => {
-    let html = `
+  let html = `
     <div class="field">
         <label class="label" for="firstName">First Name</label>
         <input type="text" name="firstName" class="input inputFirstName"/>
@@ -29,89 +29,99 @@ export const newPlayerForm = () => {
  
  
     <button class="button" id="submitPlayer">Draft to Team</button> 
-    `
-    return html
-}
+    `;
+  return html;
+};
 
 // Event listener for submitPlayer click event
-const mainContainer = document.querySelector("#container")
-mainContainer.addEventListener("click", clickEvent => {
+const mainContainer = document.querySelector("#container");
+mainContainer.addEventListener("click", (clickEvent) => {
+  if (clickEvent.target.id === "submitPlayer") {
+    //reset field background color to white
+    const firstNameField = document.querySelector(".inputFirstName");
+    firstNameField.style.background = "white";
+    const lastNameField = document.querySelector(".inputLastName");
+    lastNameField.style.background = "white";
+    const countryField = document.querySelector(".inputCountry");
+    countryField.style.background = "white";
 
-    if (clickEvent.target.id === "submitPlayer") {
-   
-        //reset field background color to white
-        const firstNameField = document.querySelector(".inputFirstName")
-        firstNameField.style.background = "white"
-        const lastNameField = document.querySelector(".inputLastName")
-        lastNameField.style.background = "white"
-        const countryField = document.querySelector(".inputCountry")
-        countryField.style.background = "white"
-        
-        // grab user input
-        let inputFirstName = document.querySelector("input[name='firstName']").value
-        let inputLastName = document.querySelector("input[name='lastName']").value
-        let inputCountry = document.querySelector("input[name='countryOfOrigin']").value
-        const inputTeamId = parseInt(document.querySelector("#teamSelection").value)
+    // grab user input
+    let inputFirstName = document.querySelector(
+      "input[name='firstName']"
+    ).value;
+    let inputLastName = document.querySelector("input[name='lastName']").value;
+    let inputCountry = document.querySelector(
+      "input[name='countryOfOrigin']"
+    ).value;
+    const inputTeamId = parseInt(
+      document.querySelector("#teamSelection").value
+    );
 
-        //check to see if individual fields are empty// each empty field is set to red
-        if (inputFirstName === "") {firstNameField.style.background = "#fc7878"}
-        if (inputLastName === "") {lastNameField.style.background = "#fc7878"}
-        if (inputCountry === "") {countryField.style.background = "#fc7878"}
-        
-        //check to see if a team is chosen, if not, message box appears and event listener returns before sending data to API
-        if (inputTeamId === 0) {
-            MessageBox("Please select a team")
-            return
-        }
-
-        //checks to see if any fields are empty, if so, event listener returns before sending data to API
-        if (inputFirstName === "" || inputLastName === "" || inputCountry === "") {return}
-
-
-        // check whether team already has three players
-        // disabled now (commented out) because of new dropdown list implementation
-        // populated teams no longer display in team select option when adding new player
-        // const playersArray = getPlayers()
-        // let playerCounter = 0
-
-        // for (let i = 0; i < playersArray.length; i++) {
-        //     if (playersArray[i].teamId === inputTeamId) {
-        //         playerCounter += 1;
-        //     }
-        // }
-
-        // if (playerCounter >= 3) {
-        //     alert("Team already has three players assigned.")
-        //     return
-        // }
-
-        const DataForAPI = {
-            firstName: inputFirstName,
-            lastName: inputLastName,
-            country: inputCountry,
-            teamId: inputTeamId
-
-        }
-        // call Post API function on sendDataToAPI
-        sendPlayerToAPI(DataForAPI)
-
+    //check to see if individual fields are empty// each empty field is set to red
+    if (inputFirstName === "") {
+      firstNameField.style.background = "#fc7878";
+    }
+    if (inputLastName === "") {
+      lastNameField.style.background = "#fc7878";
+    }
+    if (inputCountry === "") {
+      countryField.style.background = "#fc7878";
     }
 
-})
+    //check to see if a team is chosen, if not, message box appears and event listener returns before sending data to API
+    if (inputTeamId === 0) {
+      MessageBox("Please select a team");
+      return;
+    }
 
+    //checks to see if any fields are empty, if so, event listener returns before sending data to API
+    if (inputFirstName === "" || inputLastName === "" || inputCountry === "") {
+      return;
+    }
+
+    // check whether team already has three players
+    // disabled now (commented out) because of new dropdown list implementation
+    // populated teams no longer display in team select option when adding new player
+    // const playersArray = getPlayers()
+    // let playerCounter = 0
+
+    // for (let i = 0; i < playersArray.length; i++) {
+    //     if (playersArray[i].teamId === inputTeamId) {
+    //         playerCounter += 1;
+    //     }
+    // }
+
+    // if (playerCounter >= 3) {
+    //     alert("Team already has three players assigned.")
+    //     return
+    // }
+
+    const DataForAPI = {
+      firstName: inputFirstName,
+      lastName: inputLastName,
+      country: inputCountry,
+      teamId: inputTeamId,
+    };
+    // call Post API function on sendDataToAPI
+    sendPlayerToAPI(DataForAPI);
+  }
+});
 
 const sendPlayerToAPI = (playerObject) => {
-    const fetchOptions = {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(playerObject)
-    }
+  const fetchOptions = {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(playerObject),
+  };
 
-    return fetch("https://truncheons-flagons-api-n3a3b.ondigitalocean.app/players", fetchOptions)
-        .then(response => response.json())
-        .then(() => {
-            mainContainer.dispatchEvent(new CustomEvent("stateChanged"))
-        })
-}
+  return fetch(
+    "https://truncheons-flagons-api-dtv55.ondigitalocean.app/players",
+    fetchOptions
+  )
+    .then((response) => response.json())
+    .then(() => {
+      mainContainer.dispatchEvent(new CustomEvent("stateChanged"));
+    });
+};
