@@ -13,7 +13,7 @@ const mainContainer = document.querySelector("#container")
 
 // API fetch functions
 export const fetchTeams = () => {
-    return fetch("https://truncheons-flagons-api-n3a3b.ondigitalocean.app/teams")
+    return fetch("Truncheons-API-dev.us-east-1.elasticbeanstalk.com/api/teams")
         .then(response => response.json())
         .then(data => {
             applicationState.teams = data
@@ -22,7 +22,7 @@ export const fetchTeams = () => {
 
 
 export const fetchPlayers = () => {
-    return fetch("https://truncheons-flagons-api-n3a3b.ondigitalocean.app/players")
+    return fetch("Truncheons-API-dev.us-east-1.elasticbeanstalk.com/api/players")
         .then(response => response.json())
         .then(data => {
             applicationState.players = data
@@ -31,7 +31,7 @@ export const fetchPlayers = () => {
 
 
 export const fetchScores = () => {
-    return fetch("https://truncheons-flagons-api-n3a3b.ondigitalocean.app/scores")
+    return fetch("Truncheons-API-dev.us-east-1.elasticbeanstalk.com/api/scores")
         .then(response => response.json())
         .then(data => {
             applicationState.scores = data
@@ -101,7 +101,7 @@ export const sendCurrentScores = (currentScore1) => {
     }
 
 
-    return fetch("https://truncheons-flagons-api-n3a3b.ondigitalocean.app/scores", fetchOptions)
+    return fetch("Truncheons-API-dev.us-east-1.elasticbeanstalk.com/api/scores", fetchOptions)
         .then(response => response.json())
         .then(() => {
             applicationState.team2CurrentScore.timestamp = Date.now()
@@ -119,7 +119,7 @@ export const sendCurrentScores = (currentScore1) => {
     }
 
 
-    return fetch("https://truncheons-flagons-api-n3a3b.ondigitalocean.app/scores", fetchOptions)
+    return fetch("Truncheons-API-dev.us-east-1.elasticbeanstalk.com/api/scores", fetchOptions)
         .then(response => response.json())
         .then(() => {
             applicationState.team3CurrentScore.timestamp = Date.now()
@@ -137,7 +137,7 @@ const sendCurrentScore3 = (currentScore3) => {
     }
 
 
-    return fetch("https://truncheons-flagons-api-n3a3b.ondigitalocean.app/scores", fetchOptions)
+    return fetch("Truncheons-API-dev.us-east-1.elasticbeanstalk.com/api/scores", fetchOptions)
         .then(response => response.json())
         .then(() => {
             applicationState.team1CurrentScore = {}
