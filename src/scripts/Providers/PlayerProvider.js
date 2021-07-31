@@ -109,7 +109,7 @@ const sendPlayerToAPI = (playerObject) => {
         body: JSON.stringify(playerObject)
     }
 
-    return fetch("https://truncheons-flagons-api-n3a3b.ondigitalocean.app/players", fetchOptions)
+    return fetch("https://truncheons-flagons-api-dtv55.ondigitalocean.app/players", fetchOptions)
         .then(response => response.json())
         .then(() => {
             mainContainer.dispatchEvent(new CustomEvent("stateChanged"))
