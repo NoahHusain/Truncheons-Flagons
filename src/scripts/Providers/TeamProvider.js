@@ -76,7 +76,7 @@ const sendTeamToAPI = (teamObject) => {
         },
         body: JSON.stringify(teamObject)
     }
-
+// use AWS fetch calls
     return fetch("Truncheons-API-dev.us-east-1.elasticbeanstalk.com/api/teams", fetchOptions)
         .then(response => response.json())
         .then(() => {
